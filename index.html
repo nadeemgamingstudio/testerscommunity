@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Site Verification - User provided -->
+    <meta name="google-site-verification" content="2aLXWXxR4swyZqs_5IfoNyqTdIX5C7wwk_ed8AV03ss" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Nadeem Gaming Studio - Home</title>
+    <link rel="icon" href="nadeemgamingstudio.ico" type="image/x-icon"/>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom Tailwind Configuration for Gaming Theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-bg': '#0A0A0A', /* Deep Black */
+                        'secondary-bg': '#1a1a1a', /* Dark Grey */
+                        'accent-pink': '#FF0066', /* Bright Pink Accent */
+                        'accent-yellow': '#FBD534', /* Yellow Gold Accent */
+                        'accent-blue': '#00D4FF', /* Neon Blue */
+                        'accent-purple': '#9D4EDD', /* Purple */
+                        'text-light': '#e5e5e5',
+                        'border-dark': '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        'orbitron': ['Orbitron', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon-pink': '0 0 15px rgba(255, 0, 102, 0.8)',
+                        'neon-yellow': '0 0 15px rgba(251, 213, 52, 0.8)',
+                        'neon-blue': '0 0 15px rgba(0, 212, 255, 0.8)',
+                        'glow': '0 0 30px rgba(255, 0, 102, 0.5)',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'gradient': 'gradient 8s ease infinite',
+                        'slide': 'slide 20s linear infinite',
+                        'spin-slow': 'spin 8s linear infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+        /* Import Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Orbitron:wght@400;700;900&display=swap');
+        
+        /* Global Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            overflow-x: hidden;
+        }
+        
+        /* Animated Top Bar */
+        .top-animated-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, 
+                #ff0000, #ff9900, #ffff00, #33ff00, 
+                #0099ff, #6633ff, #ff00ff, #ff0000);
+            background-size: 800% 100%;
+            animation: colorSlide 10s linear infinite;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        /* Animated Side Bars */
+        .side-animated-bar {
+            position: fixed;
+            top: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, 
+                #ff0000, #ff9900, #ffff00, #33ff00, 
+                #0099ff, #6633ff, #ff00ff, #ff0000);
+            background-size: 100% 800%;
+            animation: colorSlideVertical 15s linear infinite;
+            z-index: 99;
+        }
+        
+        .left-bar {
+            left: 0;
+        }
+        
+        .right-bar {
+            right: 0;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+            background: #111;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #FF0066, #FBD534);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #FBD534, #FF0066);
+        }
+        
+        /* Animations */
+        @keyframes colorSlide {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 800% 0%;
+            }
+        }
+        
+        @keyframes colorSlideVertical {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 0% 800%;
+            }
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        @keyframes gradient {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        
+        /* Particle Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        /* Glowing Text Effect */
+        .glow-text {
+            text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+        }
+        
+        /* Modal for Full Screen Image */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-image {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 0 50px rgba(255, 0, 102, 0.7);
+            animation: pulse-slow 2s infinite;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .close-modal:hover {
+            color: #FF0066;
+            transform: rotate(90deg);
+        }
+        
+        /* Scroll to Top Button */
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #FF0066, #FBD534);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 0 20px rgba(255, 0, 102, 0.7);
+        }
+        
+        .scroll-top-btn.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-top-btn:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(255, 0, 102, 0.9);
+        }
+        
+        /* Game Card Hover Effects */
+        .game-card {
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .game-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.7s;
+        }
+        
+        .game-card:hover::before {
+            left: 100%;
+        }
+        
+        /* Typewriter Effect */
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #FF0066;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #FF0066; }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .side-animated-bar {
+                display: none;
+            }
+            .scroll-top-btn {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-primary-bg text-text-light min-h-screen antialiased">
+    
+    <!-- Animated Color Bars -->
+    <div class="top-animated-bar"></div>
+    <div class="side-animated-bar left-bar"></div>
+    <div class="side-animated-bar right-bar"></div>
+    
+    <!-- Particle Background -->
+    <div class="particles" id="particles-js"></div>
+    
+    <!-- Modal for Full Screen Image -->
+    <div id="imageModal" class="modal-overlay">
+        <span class="close-modal">&times;</span>
+        <img id="modalImg" class="modal-image" src="" alt="Full Screen Image">
+    </div>
+    
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top-btn" id="scrollTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Header / Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-secondary-bg/90 backdrop-blur-md shadow-2xl shadow-black/70 border-b-2 border-accent-pink">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Title -->
+            <div class="flex items-center space-x-3" data-aos="fade-right" data-aos-duration="1000">
+                <div class="relative">
+                    <img src="nadeemgamingstudio.ico" alt="Nadeem Studio Logo" 
+                         class="h-10 w-10 rounded-xl border-2 border-accent-yellow p-0.5 animate-spin-slow"
+                         onerror="this.src='https://placehold.co/40x40/1a1a1a/f06?text=NGS'">
+                    <div class="absolute -top-1 -right-1 h-4 w-4 bg-accent-pink rounded-full animate-pulse"></div>
+                </div>
+                <div>
+                    <span class="text-2xl font-black tracking-wider text-white font-orbitron bg-gradient-to-r from-accent-pink to-accent-yellow bg-clip-text text-transparent">
+                        NAD<span class="text-accent-yellow">EE</span>M GAMING
+                    </span>
+                    <div class="text-xs text-accent-blue font-bold tracking-widest uppercase mt-0.5">
+                        <i class="fas fa-gamepad mr-1"></i> STUDIO
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Links -->
+            <div class="space-x-4 flex items-center" data-aos="fade-left" data-aos-duration="1000">
+                <a href="https://nadeemgamingstudio.github.io" 
+                   class="relative group px-5 py-2.5 rounded-xl font-bold transition-all duration-300 overflow-hidden">
+                    <span class="relative z-10 text-white flex items-center">
+                        <i class="fas fa-home mr-2"></i> HOME
+                    </span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-accent-pink to-accent-yellow opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute inset-0 border-2 border-accent-pink rounded-xl"></div>
+                </a>
+                
+                <a href="https://nadeemgamingstudio.github.io/Contact" 
+                   class="relative group px-5 py-2.5 rounded-xl font-bold transition-all duration-300 overflow-hidden">
+                    <span class="relative z-10 text-white flex items-center">
+                        <i class="fas fa-phone-alt mr-2"></i> CONTACT
+                    </span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-accent-blue to-accent-purple opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute inset-0 border-2 border-accent-blue rounded-xl"></div>
+                </a>
+                
+                <!-- Social Media Icons -->
+                <div class="ml-4 flex space-x-3">
+                    <a href="#" class="text-text-light hover:text-accent-pink transition duration-300 transform hover:scale-125">
+                        <i class="fab fa-twitter text-lg"></i>
+                    </a>
+                    <a href="#" class="text-text-light hover:text-accent-yellow transition duration-300 transform hover:scale-125">
+                        <i class="fab fa-youtube text-lg"></i>
+                    </a>
+                    <a href="#" class="text-text-light hover:text-accent-blue transition duration-300 transform hover:scale-125">
+                        <i class="fab fa-discord text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20">
+        
+        <!-- Hero Section -->
+        <section class="text-center mb-20" data-aos="fade-up" data-aos-duration="1200">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 font-orbitron">
+                <span class="bg-gradient-to-r from-accent-pink via-accent-yellow to-accent-blue bg-clip-text text-transparent">
+                    GAME <span class="text-white">ON</span>
+                </span>
+            </h1>
+            <div class="typewriter text-2xl md:text-3xl font-bold text-white mb-8 max-w-3xl mx-auto">
+                Where Creativity Meets Play!
+            </div>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+                Experience the ultimate collection of fun, engaging and addictive games crafted with passion by indie developer Mr. Nadeem.
+            </p>
+            
+            <!-- Animated Stats -->
+            <div class="flex flex-wrap justify-center gap-8 mb-12">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl font-bold text-accent-yellow mb-2">7+</div>
+                    <div class="text-gray-400 uppercase tracking-wider text-sm">Games</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl font-bold text-accent-pink mb-2">5000+</div>
+                    <div class="text-gray-400 uppercase tracking-wider text-sm">Players</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+                    <div class="text-4xl font-bold text-accent-blue mb-2">100%</div>
+                    <div class="text-gray-400 uppercase tracking-wider text-sm">Fun Guaranteed</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Game Showcase Section -->
+        <section class="mb-24">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl sm:text-5xl font-extrabold mb-6 text-white uppercase tracking-wider font-orbitron">
+                    <span class="relative">
+                        <span class="text-accent-yellow glow-text">🎮 Featured</span> Games
+                        <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 h-1 w-32 bg-gradient-to-r from-accent-pink to-accent-yellow rounded-full"></div>
+                    </span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Dive into our collection of handcrafted games. Each one is designed to deliver unique gameplay experiences!
+                </p>
+            </div>
+            
+            <!-- Grid Layout for Games -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                
+                <!-- Game 1: Cat vs Mouse Rain -->
+                <div class="game-card group bg-gradient-to-br from-secondary-bg to-black p-6 rounded-2xl shadow-2xl hover:shadow-glow transition-all duration-500 border border-gray-800 hover:border-accent-pink"
+                     data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-xl mb-5 aspect-video">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-accent-pink/20 to-accent-yellow/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <img src="https://nadeemgamingstudio.github.io/CatvsMouseRain.png" alt="Cat vs Mouse Rain Cover" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-accent-pink text-white text-xs font-bold px-3 py-1 rounded-full">
+                            HOT
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start mb-3">
+                        <div>
+                            <h3 class="text-xl font-bold text-white group-hover:text-accent-yellow transition duration-300">
+                                Cat vs Mouse Rain
+                            </h3>
+                            <p class="text-sm text-gray-400 mt-1">
+                                Addictive Arcade Challenge!
+                            </p>
+                        </div>
+                        <div class="text-accent-yellow text-2xl">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-4">
+                        <a href="https://nadeemgamingstudio.github.io/catvsmouserain" 
+                           class="px-4 py-2 bg-gradient-to-r from-accent-pink to-accent-yellow text-white font-bold rounded-lg text-sm hover:shadow-neon-pink transition-all duration-300 transform hover:scale-105">
+                            PLAY NOW
+                        </a>
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Game 2: Guess SpelloPic -->
+                <div class="game-card group bg-gradient-to-br from-secondary-bg to-black p-6 rounded-2xl shadow-2xl hover:shadow-neon-yellow transition-all duration-500 border border-gray-800 hover:border-accent-yellow"
+                     data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-xl mb-5 aspect-video">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-accent-yellow/20 to-accent-blue/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <img src="https://nadeemgamingstudio.github.io/guessspellopic.png" alt="Guess SpelloPic Cover" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="flex justify-between items-start mb-3">
+                        <div>
+                            <h3 class="text-xl font-bold text-white group-hover:text-accent-yellow transition duration-300">
+                                Guess SpelloPic
+                            </h3>
+                            <p class="text-sm text-gray-400 mt-1">
+                                Fun Word & Picture Puzzle
+                            </p>
+                        </div>
+                        <div class="text-accent-blue text-2xl">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-4">
+                        <a href="https://nadeemgamingstudio.github.io/guessspellopic" 
+                           class="px-4 py-2 bg-gradient-to-r from-accent-yellow to-accent-blue text-white font-bold rounded-lg text-sm hover:shadow-neon-yellow transition-all duration-300 transform hover:scale-105">
+                            PLAY NOW
+                        </a>
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App 3: 12 Testers -->
+                <div class="game-card group bg-gradient-to-br from-secondary-bg to-black p-6 rounded-2xl shadow-2xl hover:shadow-neon-blue transition-all duration-500 border border-gray-800 hover:border-accent-blue"
+                     data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden rounded-xl mb-5 aspect-video">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-accent-blue/20 to-accent-purple/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <img src="https://raw.githubusercontent.com/nadeemgamingstudio/Icons/refs/heads/main/12TestersTestersCommunity.png" alt="12 Testers Cover" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-accent-blue text-white text-xs font-bold px-3 py-1 rounded-full">
+                            NEW
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start mb-3">
+                        <div>
+                            <h3 class="text-xl font-bold text-white group-hover:text-accent-blue transition duration-300">
+                                12 Testers Community
+                            </h3>
+                            <p class="text-sm text-gray-400 mt-1">
+                                Join the testing community
+                            </p>
+                        </div>
+                        <div class="text-accent-purple text-2xl">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-4">
+                        <a href="https://nadeemgamingstudio.github.io/12TestersTestersCommunity/" 
+                           class="px-4 py-2 bg-gradient-to-r from-accent-blue to-accent-purple text-white font-bold rounded-lg text-sm hover:shadow-neon-blue transition-all duration-300 transform hover:scale-105">
+                            JOIN NOW
+                        </a>
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Coming Soon Game Card -->
+                <div class="game-card group bg-gradient-to-br from-secondary-bg to-black p-6 rounded-2xl shadow-2xl hover:shadow-glow transition-all duration-500 border-2 border-dashed border-gray-700 hover:border-accent-purple flex flex-col justify-center items-center text-center"
+                     data-aos="fade-up" data-aos-delay="400">
+                    <div class="mb-5 text-5xl text-gray-600 group-hover:text-accent-purple transition duration-500">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-500 group-hover:text-white transition duration-300 mb-2">
+                        COMING SOON
+                    </h3>
+                    <p class="text-gray-500 text-sm mb-5">
+                        Exciting new game in development
+                    </p>
+                    <div class="w-full bg-gray-800 rounded-full h-2.5 mb-1">
+                        <div class="bg-gradient-to-r from-accent-pink to-accent-purple h-2.5 rounded-full w-3/4"></div>
+                    </div>
+                    <p class="text-xs text-gray-400">Development: 75% Complete</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="mb-24" data-aos="fade-up">
+            <div class="bg-gradient-to-br from-gray-900 to-black p-10 rounded-3xl shadow-2xl border border-gray-800 relative overflow-hidden">
+                <div class="absolute -top-20 -right-20 w-60 h-60 bg-accent-pink/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-accent-yellow/10 rounded-full blur-3xl"></div>
+                
+                <div class="relative z-10">
+                    <h2 class="text-4xl font-bold mb-8 text-white uppercase font-orbitron">
+                        <span class="flex items-center">
+                            <span class="bg-gradient-to-r from-accent-pink to-accent-yellow bg-clip-text text-transparent">
+                                🕹️ About Nadeem Gaming Studio
+                            </span>
+                            <div class="ml-4 h-1 flex-grow bg-gradient-to-r from-accent-pink to-accent-yellow rounded-full"></div>
+                        </span>
+                    </h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-10 items-center">
+                        <div>
+                            <p class="text-text-light text-lg mb-6 leading-relaxed">
+                                <strong class="text-2xl bg-gradient-to-r from-accent-pink to-accent-yellow bg-clip-text text-transparent">Welcome to Nadeem Gaming Studio</strong> – Where Creativity Meets Play!
+                            </p>
+
+                            <p class="text-gray-300 mb-6 leading-relaxed">
+                                At Nadeem Gaming Studio, we believe in transforming imagination into captivating interactive experiences. Founded by a passionate indie game developer, our studio is dedicated to creating fun, engaging, and family-friendly games that players of all ages can enjoy.
+                            </p>
+
+                            <p class="text-gray-300 mb-6 leading-relaxed">
+                                Our journey began with a deep love for gaming and a desire to create original content. We started small—just one person with big dreams and a lot of ideas. Today, Nadeem Gaming Studio is growing fast, with a primary focus on mobile gaming that is easy to pick up and hard to put down.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-4 mt-8">
+                                <div class="px-4 py-2 bg-gray-800/50 rounded-full border border-accent-pink/30">
+                                    <i class="fas fa-heart text-accent-pink mr-2"></i>
+                                    <span>Passion-Driven</span>
+                                </div>
+                                <div class="px-4 py-2 bg-gray-800/50 rounded-full border border-accent-yellow/30">
+                                    <i class="fas fa-lightbulb text-accent-yellow mr-2"></i>
+                                    <span>Creative Ideas</span>
+                                </div>
+                                <div class="px-4 py-2 bg-gray-800/50 rounded-full border border-accent-blue/30">
+                                    <i class="fas fa-gamepad text-accent-blue mr-2"></i>
+                                    <span>Fun First</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="relative">
+                            <div class="bg-gradient-to-br from-accent-pink/20 to-accent-yellow/20 p-1 rounded-2xl">
+                                <div class="bg-gray-900 rounded-xl p-6">
+                                    <div class="text-5xl text-center mb-6">
+                                        <i class="fas fa-quote-left text-accent-pink mr-4"></i>
+                                        <span class="text-3xl font-bold bg-gradient-to-r from-accent-pink to-accent-yellow bg-clip-text text-transparent">Our Mission</span>
+                                        <i class="fas fa-quote-right text-accent-yellow ml-4"></i>
+                                    </div>
+                                    <p class="text-xl text-center text-gray-300 italic mb-8">
+                                        "To create unforgettable gaming experiences that bring joy to players worldwide through innovation, creativity, and passion."
+                                    </p>
+                                    <div class="text-center">
+                                        <div class="inline-block px-6 py-3 bg-gradient-to-r from-accent-pink to-accent-yellow rounded-full font-bold text-white animate-pulse-slow">
+                                            <i class="fas fa-rocket mr-2"></i> Game On!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile / Developer Card -->
+        <section class="flex justify-center" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="relative group w-full max-w-2xl">
+                <div class="absolute -inset-1 bg-gradient-to-r from-accent-pink via-accent-yellow to-accent-blue rounded-3xl blur opacity-30 group-hover:opacity-70 transition duration-1000 group-hover:duration-200 animate-gradient"></div>
+                
+                <div class="relative bg-gradient-to-br from-gray-900 to-black p-10 rounded-3xl shadow-2xl border border-gray-800 text-center overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-pink to-accent-yellow"></div>
+                    
+                    <div class="flex flex-col md:flex-row items-center gap-10">
+                        <div class="relative">
+                            <div class="relative w-48 h-48 rounded-full overflow-hidden border-4 border-accent-yellow p-1 shadow-2xl group-hover:shadow-neon-yellow transition duration-500 cursor-pointer" id="profileImage">
+                                <img src="https://raw.githubusercontent.com/nadeemgamingstudio/Icons/refs/heads/main/NadeemD.jpg" alt="Nadeem Photo" 
+                                     class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/300x300/1a1a1a/fbd534?text=Nadeem'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-accent-pink/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                            </div>
+                            <div class="absolute -bottom-2 -right-2 w-16 h-16 bg-accent-pink rounded-full flex items-center justify-center text-white text-2xl animate-bounce-slow">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="text-left flex-1">
+                            <h3 class="text-3xl font-extrabold text-white mb-2 font-orbitron">
+                                <span class="bg-gradient-to-r from-accent-pink to-accent-yellow bg-clip-text text-transparent">
+                                    MR. NADEEM
+                                </span>
+                            </h3>
+                            <p class="text-lg text-accent-pink font-medium uppercase tracking-widest mb-4">
+                                <i class="fas fa-code mr-2"></i> Game Developer & Founder
+                            </p>
+                            <p class="text-gray-300 mb-6 leading-relaxed border-l-4 border-accent-yellow pl-4 py-2">
+                                "Creative indie developer crafting fun, unique games with heart. Passionate about creating engaging experiences that players love."
+                            </p>
+                            
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-accent-pink mr-3">
+                                        <i class="fas fa-laptop-code"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm text-gray-400">Experience</div>
+                                        <div class="font-bold">5+ Years</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-accent-yellow mr-3">
+                                        <i class="fas fa-gamepad"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm text-gray-400">Games Made</div>
+                                        <div class="font-bold">7+ Titles</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-accent-pink hover:shadow-neon-pink transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-accent-blue hover:shadow-neon-blue transition duration-300">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-accent-yellow hover:shadow-neon-yellow transition duration-300">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10 pt-6 border-t border-gray-800">
+                        <div class="text-gray-400 text-sm italic">
+                            <i class="fas fa-quote-left text-accent-pink mr-2"></i>
+                            Every game is a new adventure, and I'm here to create those adventures for you!
+                            <i class="fas fa-quote-right text-accent-yellow ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="mt-24" data-aos="fade-up">
+            <div class="bg-gradient-to-r from-gray-900 to-black p-10 rounded-3xl border border-gray-800 text-center">
+                <h3 class="text-3xl font-bold text-white mb-4">
+                    <i class="fas fa-envelope text-accent-pink mr-3"></i>
+                    Stay Updated!
+                </h3>
+                <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Subscribe to our newsletter to get notified about new game releases, updates, and exclusive content.
+                </p>
+                
+                <form class="max-w-md mx-auto">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="email" placeholder="Enter your email address" 
+                               class="flex-grow px-6 py-4 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-accent-pink focus:shadow-neon-pink transition duration-300">
+                        <button type="submit" 
+                                class="px-8 py-4 bg-gradient-to-r from-accent-pink to-accent-yellow text-white font-bold rounded-xl hover:shadow-glow transition-all duration-300 transform hover:scale-105">
+                            Subscribe
+                        </button>
+                    </div>
+                </form>
+                
+                <p class="text-gray-500 text-sm mt-6">
+                    <i class="fas fa-shield-alt text-accent-blue mr-2"></i>
+                    We respect your privacy. No spam, ever.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-bg border-t-2 border-accent-pink/30 py-10 mt-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-10 mb-10">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="nadeemgamingstudio.ico" alt="Nadeem Studio Logo" class="h-10 w-10 rounded-xl">
+                        <span class="text-xl font-black tracking-wider text-white font-orbitron">NADEEM GAMING</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Creating fun, engaging and memorable gaming experiences for players worldwide.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6 border-l-4 border-accent-yellow pl-3">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="https://nadeemgamingstudio.github.io" class="text-gray-400 hover:text-accent-pink transition duration-300"><i class="fas fa-chevron-right text-xs mr-2"></i> Home</a></li>
+                        <li><a href="https://nadeemgamingstudio.github.io/Contact" class="text-gray-400 hover:text-accent-yellow transition duration-300"><i class="fas fa-chevron-right text-xs mr-2"></i> Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent-blue transition duration-300"><i class="fas fa-chevron-right text-xs mr-2"></i> Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent-purple transition duration-300"><i class="fas fa-chevron-right text-xs mr-2"></i> Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6 border-l-4 border-accent-pink pl-3">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-accent-pink hover:shadow-neon-pink transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-accent-yellow hover:shadow-neon-yellow transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-accent-blue hover:shadow-neon-blue transition duration-300">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-accent-purple hover:shadow-neon-pink transition duration-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        <i class="fas fa-envelope text-accent-yellow mr-2"></i>
+                        contact@nadeemgamingstudio.com
+                    </p>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        &copy; 2025 <span class="text-accent-yellow font-bold">Nadeem Gaming Studio</span>. All Rights Reserved.
+                    </div>
+                    <div>
+                        Crafted with <i class="fas fa-heart text-accent-pink mx-1"></i> by Mr. Nadeem
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize AOS (Animate On Scroll)
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: false,
+                offset: 100
+            });
+            
+            // Scroll to Top Button
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollTopBtn.classList.add('active');
+                } else {
+                    scrollTopBtn.classList.remove('active');
+                }
+            });
+            
+            scrollTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Image Modal for Profile Photo
+            const profileImage = document.getElementById('profileImage');
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            const closeModal = document.querySelector('.close-modal');
+            
+            profileImage.addEventListener('click', function() {
+                modal.style.display = 'flex';
+                modalImg.src = 'https://raw.githubusercontent.com/nadeemgamingstudio/Icons/refs/heads/main/NadeemD.jpg';
+            });
+            
+            closeModal.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+            
+            // Simple Particle Effect
+            const particlesContainer = document.querySelector('.particles');
+            const colors = ['#FF0066', '#FBD534', '#00D4FF', '#9D4EDD'];
+            
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.style.position = 'absolute';
+                particle.style.width = Math.random() * 5 + 2 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                particle.style.borderRadius = '50%';
+                particle.style.left = Math.random() * 100 + 'vw';
+                particle.style.top = Math.random() * 100 + 'vh';
+                particle.style.opacity = Math.random() * 0.5 + 0.2;
+                particle.style.boxShadow = `0 0 ${Math.random() * 10 + 5}px currentColor`;
+                
+                // Add animation
+                particle.style.animation = `float ${Math.random() * 10 + 10}s linear infinite`;
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                
+                particlesContainer.appendChild(particle);
+            }
+            
+            // Typewriter Effect
+            const typewriterElement = document.querySelector('.typewriter');
+            if (typewriterElement) {
+                setTimeout(() => {
+                    typewriterElement.style.animation = 'none';
+                    setTimeout(() => {
+                        typewriterElement.style.borderRight = 'none';
+                    }, 500);
+                }, 4000);
+            }
+        });
+    </script>
+</body>
+</html>
+
