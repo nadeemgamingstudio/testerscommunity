@@ -18,7 +18,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   
-  <!-- Custom Tailwind Configuration for Gaming Theme -->
+  <!-- Custom Tailwind Configuration for Enhanced Gaming Theme -->
   <script>
     tailwind.config = {
       theme: {
@@ -38,22 +38,24 @@
             'purple-custom': '#7C3AED',
             'teal-accent': '#00bfa6',
             'dark-bg': '#0f1724',
+            'dark-card': '#0A1120',
           },
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
             'orbitron': ['Orbitron', 'sans-serif'],
           },
           boxShadow: {
-            'neon-pink': '0 0 15px rgba(255, 0, 102, 0.8)',
-            'neon-yellow': '0 0 15px rgba(251, 213, 52, 0.8)',
-            'neon-blue': '0 0 15px rgba(0, 212, 255, 0.8)',
-            'neon-red': '0 0 15px rgba(255, 0, 0, 0.8)',
-            'neon-green': '0 0 15px rgba(0, 191, 166, 0.8)',
-            'neon-indigo': '0 0 15px rgba(79, 70, 229, 0.8)',
-            'neon-purple': '0 0 15px rgba(124, 58, 237, 0.8)',
-            'neon-teal': '0 0 15px rgba(0, 191, 166, 0.8)',
-            'glow': '0 0 30px rgba(255, 0, 102, 0.5)',
-            'glow-teal': '0 0 30px rgba(0, 191, 166, 0.5)',
+            'neon-pink': '0 0 20px rgba(255, 0, 102, 0.9)',
+            'neon-yellow': '0 0 20px rgba(251, 213, 52, 0.9)',
+            'neon-blue': '0 0 20px rgba(0, 212, 255, 0.9)',
+            'neon-red': '0 0 20px rgba(255, 0, 0, 0.9)',
+            'neon-green': '0 0 20px rgba(0, 191, 166, 0.9)',
+            'neon-indigo': '0 0 20px rgba(79, 70, 229, 0.9)',
+            'neon-purple': '0 0 20px rgba(124, 58, 237, 0.9)',
+            'neon-teal': '0 0 20px rgba(0, 191, 166, 0.9)',
+            'glow': '0 0 40px rgba(255, 0, 102, 0.7)',
+            'glow-teal': '0 0 40px rgba(0, 191, 166, 0.7)',
+            'card-hover': '0 20px 60px rgba(0, 0, 0, 0.5)',
           },
           animation: {
             'pulse-slow': 'pulse 3s infinite',
@@ -63,18 +65,25 @@
             'spin-slow': 'spin 8s linear infinite',
             'bounce-slow': 'bounce 2s infinite',
             'ping-slow': 'ping 4s cubic-bezier(0, 0, 0.2, 1) infinite',
+            'shimmer': 'shimmer 2s infinite',
+            'border-glow': 'border-glow 3s infinite',
+            'fade-in': 'fadeIn 1s ease-in-out',
+            'slide-up': 'slideUp 0.8s ease-out',
+            'blink': 'blink 1.5s infinite',
           },
           backgroundImage: {
             'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
             'gradient-testers': 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #00bfa6 100%)',
             'gradient-dark': 'linear-gradient(180deg, #071026 0%, #08102a 55%, #05111f 100%)',
+            'gradient-card': 'linear-gradient(145deg, #0A1120 0%, #0D1528 100%)',
+            'gradient-accent': 'linear-gradient(90deg, #FF0066, #FBD534, #00D4FF, #00bfa6)',
           }
         }
       }
     }
   </script>
   
-  <!-- Custom Styles -->
+  <!-- Custom Enhanced Styles -->
   <style>
     /* Import Fonts */
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Orbitron:wght@400;700;900&display=swap');
@@ -87,34 +96,36 @@
       color: #e5e5e5;
     }
     
-    /* Animated Top Bar */
+    /* Enhanced Animated Top Bar */
     .top-animated-bar {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      height: 5px;
+      height: 6px;
       background: linear-gradient(90deg, 
         #4F46E5, #7C3AED, #00bfa6, #FBD534,
         #2ECC71, #00D4FF, #FF0066, #4F46E5);
-      background-size: 800% 100%;
-      animation: colorSlide 10s linear infinite;
+      background-size: 1000% 100%;
+      animation: colorSlide 8s linear infinite;
       z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+      filter: blur(0.5px);
     }
     
-    /* Animated Side Bars */
+    /* Enhanced Side Bars */
     .side-animated-bar {
       position: fixed;
       top: 0;
-      width: 5px;
+      width: 6px;
       height: 100%;
       background: linear-gradient(180deg, 
         #4F46E5, #7C3AED, #00bfa6, #FBD534,
         #2ECC71, #00D4FF, #FF0066, #4F46E5);
-      background-size: 100% 800%;
-      animation: colorSlideVertical 15s linear infinite;
+      background-size: 100% 1000%;
+      animation: colorSlideVertical 12s linear infinite;
       z-index: 99;
+      box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
     }
     
     .left-bar {
@@ -125,33 +136,35 @@
       right: 0;
     }
     
-    /* Custom Scrollbar */
+    /* Enhanced Custom Scrollbar */
     ::-webkit-scrollbar {
-      width: 12px;
-      background: #111;
+      width: 14px;
+      background: #0A0A0A;
     }
     
     ::-webkit-scrollbar-track {
-      background: #1a1a1a;
+      background: linear-gradient(180deg, #1a1a1a, #0f1724);
       border-radius: 10px;
     }
     
     ::-webkit-scrollbar-thumb {
-      background: linear-gradient(180deg, #4F46E5, #00bfa6);
+      background: linear-gradient(180deg, #4F46E5, #00bfa6, #FF0066);
       border-radius: 10px;
+      border: 2px solid #0A0A0A;
     }
     
     ::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(180deg, #00bfa6, #4F46E5);
+      background: linear-gradient(180deg, #FF0066, #00bfa6, #4F46E5);
+      box-shadow: 0 0 15px rgba(0, 191, 166, 0.7);
     }
     
-    /* Animations */
+    /* Enhanced Animations */
     @keyframes colorSlide {
       0% {
         background-position: 0% 0%;
       }
       100% {
-        background-position: 800% 0%;
+        background-position: 1000% 0%;
       }
     }
     
@@ -160,19 +173,16 @@
         background-position: 0% 0%;
       }
       100% {
-        background-position: 0% 800%;
+        background-position: 0% 1000%;
       }
     }
     
     @keyframes float {
-      0% {
-        transform: translateY(0px);
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg);
       }
       50% {
-        transform: translateY(-20px);
-      }
-      100% {
-        transform: translateY(0px);
+        transform: translateY(-25px) rotate(1deg);
       }
     }
     
@@ -194,7 +204,56 @@
       }
     }
     
-    /* Particle Background */
+    @keyframes shimmer {
+      0% {
+        background-position: -1000px 0;
+      }
+      100% {
+        background-position: 1000px 0;
+      }
+    }
+    
+    @keyframes border-glow {
+      0%, 100% {
+        border-color: rgba(255, 0, 102, 0.3);
+        box-shadow: 0 0 10px rgba(255, 0, 102, 0.2);
+      }
+      50% {
+        border-color: rgba(0, 212, 255, 0.6);
+        box-shadow: 0 0 25px rgba(0, 212, 255, 0.4);
+      }
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes blink {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.3;
+      }
+    }
+    
+    /* Enhanced Particle Background */
     .particles {
       position: fixed;
       top: 0;
@@ -203,33 +262,46 @@
       height: 100%;
       z-index: -1;
       pointer-events: none;
+      opacity: 0.7;
     }
     
-    /* Glowing Text Effect */
+    /* Enhanced Glowing Text Effect */
     .glow-text {
-      text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+      text-shadow: 0 0 15px currentColor, 0 0 30px currentColor, 0 0 45px currentColor;
+      animation: glow-text-pulse 4s infinite alternate;
     }
     
-    /* Scroll to Top Button */
+    @keyframes glow-text-pulse {
+      0% {
+        text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+      }
+      100% {
+        text-shadow: 0 0 20px currentColor, 0 0 40px currentColor, 0 0 60px currentColor;
+      }
+    }
+    
+    /* Enhanced Scroll to Top Button */
     .scroll-top-btn {
       position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 60px;
-      height: 60px;
-      background: linear-gradient(45deg, #4F46E5, #00bfa6);
+      bottom: 40px;
+      right: 40px;
+      width: 65px;
+      height: 65px;
+      background: linear-gradient(135deg, #4F46E5, #00bfa6, #FF0066);
+      background-size: 300% 300%;
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       color: white;
-      font-size: 24px;
+      font-size: 26px;
       cursor: pointer;
       z-index: 99;
       opacity: 0;
       visibility: hidden;
-      transition: all 0.3s;
-      box-shadow: 0 0 20px rgba(79, 70, 229, 0.7);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 0 30px rgba(79, 70, 229, 0.8);
+      animation: gradient 4s ease infinite;
     }
     
     .scroll-top-btn.active {
@@ -238,11 +310,11 @@
     }
     
     .scroll-top-btn:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 30px rgba(79, 70, 229, 0.9);
+      transform: translateY(-10px) scale(1.1);
+      box-shadow: 0 0 50px rgba(79, 70, 229, 1);
     }
     
-    /* Typewriter Effect */
+    /* Enhanced Typewriter Effect */
     .typewriter {
       overflow: hidden;
       border-right: .15em solid #00bfa6;
@@ -264,23 +336,40 @@
       50% { border-color: #00bfa6; }
     }
     
-    /* Card Hover Effects */
+    /* Enhanced Card Hover Effects */
     .policy-card {
-      transition: all 0.3s ease;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, #0A1120 0%, #0D1528 100%);
+    }
+    
+    .policy-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+      transition: left 0.7s;
+    }
+    
+    .policy-card:hover::before {
+      left: 100%;
     }
     
     .policy-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
     }
     
-    /* Gradient Background */
+    /* Enhanced Gradient Background */
     .gradient-bg {
-      background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(124, 58, 237, 0.1) 50%, rgba(0, 191, 166, 0.1) 100%);
+      background: linear-gradient(135deg, rgba(79, 70, 229, 0.15) 0%, rgba(124, 58, 237, 0.15) 50%, rgba(0, 191, 166, 0.15) 100%);
     }
     
-    /* Animated Border */
+    /* Enhanced Animated Border */
     .animated-border {
       position: relative;
       border: 2px solid transparent;
@@ -294,68 +383,196 @@
       left: -2px;
       right: -2px;
       bottom: -2px;
-      background: linear-gradient(45deg, #4F46E5, #7C3AED, #00bfa6, #FBD534);
+      background: linear-gradient(45deg, #4F46E5, #7C3AED, #00bfa6, #FBD534, #4F46E5);
+      background-size: 400% 400%;
       z-index: -1;
       border-radius: inherit;
       animation: gradient 4s linear infinite;
-      background-size: 400% 400%;
     }
     
-    /* Section Counter */
+    /* Enhanced Section Counter */
     .section-counter {
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      margin-right: 15px;
+      margin-right: 20px;
       flex-shrink: 0;
-    }
-    
-    /* Feature Icon Animation */
-    .feature-icon {
+      font-size: 1.5rem;
+      box-shadow: 0 0 20px currentColor;
       transition: all 0.3s ease;
     }
     
+    .section-counter:hover {
+      transform: rotate(360deg) scale(1.2);
+    }
+    
+    /* Enhanced Feature Icon Animation */
+    .feature-icon {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
     .feature-icon:hover {
-      transform: rotate(15deg) scale(1.2);
+      transform: rotate(20deg) scale(1.3);
+      filter: drop-shadow(0 0 15px currentColor);
     }
     
-    /* Alert Box */
+    /* Enhanced Alert Box */
     .alert-box {
-      border-left: 5px solid;
-      animation: pulse 2s infinite;
+      border-left: 6px solid;
+      animation: border-glow 3s infinite;
+      position: relative;
+      overflow: hidden;
     }
     
-    /* Responsive adjustments */
+    .alert-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+      animation: shimmer 3s infinite;
+    }
+    
+    /* Enhanced Button Styles */
+    .neon-button {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      background: linear-gradient(90deg, var(--start-color), var(--end-color));
+      background-size: 200% 100%;
+      animation: gradient 3s ease infinite;
+    }
+    
+    .neon-button:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+    
+    /* Enhanced Responsive adjustments */
     @media (max-width: 768px) {
       .side-animated-bar {
         display: none;
       }
       .scroll-top-btn {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
+        width: 55px;
+        height: 55px;
+        bottom: 25px;
+        right: 25px;
+        font-size: 22px;
       }
       .section-counter {
-        width: 35px;
-        height: 35px;
-        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+        font-size: 1.2rem;
       }
+      .policy-card {
+        padding: 1.5rem !important;
+      }
+    }
+    
+    /* Enhanced Loading Animation */
+    .loading-bar {
+      height: 4px;
+      background: linear-gradient(90deg, #4F46E5, #00bfa6, #FF0066);
+      background-size: 300% 100%;
+      animation: gradient 2s ease infinite, shimmer 1.5s infinite;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0;
+      z-index: 101;
+    }
+    
+    /* Enhanced Progress Indicator for Table of Contents */
+    .progress-indicator {
+      position: fixed;
+      top: 100px;
+      right: 30px;
+      width: 10px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      z-index: 98;
+      overflow: hidden;
+    }
+    
+    .progress-fill {
+      width: 100%;
+      background: linear-gradient(180deg, #4F46E5, #00bfa6, #FF0066);
+      border-radius: 10px;
+      transition: height 0.3s ease;
+    }
+    
+    /* Enhanced Floating Elements */
+    .floating-element {
+      animation: float 8s ease-in-out infinite;
+    }
+    
+    /* Enhanced Text Selection */
+    ::selection {
+      background: rgba(0, 191, 166, 0.5);
+      color: white;
+    }
+    
+    /* Enhanced Focus Styles */
+    :focus {
+      outline: 2px solid #00bfa6;
+      outline-offset: 3px;
+    }
+    
+    /* Enhanced Tooltip */
+    .tooltip {
+      position: relative;
+    }
+    
+    .tooltip:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.9);
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      white-space: nowrap;
+      z-index: 1000;
+      border: 1px solid #00bfa6;
+    }
+    
+    /* Enhanced Backdrop Filter */
+    .glass-effect {
+      background: rgba(26, 26, 26, 0.7);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
   </style>
 </head>
 <body class="bg-primary-bg text-text-light min-h-screen antialiased">
+  
+  <!-- Loading Bar -->
+  <div class="loading-bar" id="loadingBar"></div>
+  
+  <!-- Progress Indicator -->
+  <div class="progress-indicator hidden md:block">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
   
   <!-- Animated Color Bars -->
   <div class="top-animated-bar"></div>
   <div class="side-animated-bar left-bar"></div>
   <div class="side-animated-bar right-bar"></div>
   
-  <!-- Particle Background -->
+  <!-- Enhanced Particle Background -->
   <div class="particles" id="particles-js"></div>
   
   <!-- Scroll to Top Button -->
@@ -364,7 +581,7 @@
   </div>
 
   <!-- Header / Navigation Bar -->
-  <header class="sticky top-0 z-50 bg-secondary-bg/90 backdrop-blur-md shadow-2xl shadow-black/70 border-b-2 border-teal-accent">
+  <header class="sticky top-0 z-50 glass-effect shadow-2xl shadow-black/70 border-b-2 border-teal-accent">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
       <!-- Logo/Title -->
       <div class="flex items-center space-x-3" data-aos="fade-right" data-aos-duration="1000">
@@ -372,17 +589,18 @@
           <a href="https://nadeemgamingstudio.github.io/12TestersTestersCommunity">
             <img src="https://raw.githubusercontent.com/nadeemgamingstudio/Icons/refs/heads/main/12TestersTestersCommunity.png" 
                  alt="12 Testers Logo" 
-                 class="h-10 w-10 rounded-xl border-2 border-accent-yellow p-0.5 animate-spin-slow"
-                 onerror="this.src='https://placehold.co/40x40/1a1a1a/00bfa6?text=12T'">
+                 class="h-12 w-12 rounded-xl border-2 border-accent-yellow p-0.5 animate-spin-slow hover:animate-spin"
+                 onerror="this.src='https://placehold.co/48x48/1a1a1a/00bfa6?text=12T'">
           </a>
-          <div class="absolute -top-1 -right-1 h-4 w-4 bg-accent-pink rounded-full animate-pulse"></div>
+          <div class="absolute -top-1 -right-1 h-5 w-5 bg-accent-pink rounded-full animate-ping-slow"></div>
+          <div class="absolute -top-1 -right-1 h-5 w-5 bg-accent-pink rounded-full"></div>
         </div>
         <div>
-          <span class="text-2xl font-black tracking-wider text-white font-orbitron bg-gradient-to-r from-teal-accent to-accent-blue bg-clip-text text-transparent">
+          <span class="text-3xl font-black tracking-wider text-white font-orbitron bg-gradient-to-r from-teal-accent to-accent-blue bg-clip-text text-transparent">
             12 <span class="text-accent-yellow">TESTERS</span>
           </span>
-          <div class="text-xs text-accent-blue font-bold tracking-widest uppercase mt-0.5">
-            <i class="fas fa-child mr-1"></i> CHILD SAFETY POLICY
+          <div class="text-xs text-accent-blue font-bold tracking-widest uppercase mt-0.5 flex items-center">
+            <i class="fas fa-child mr-2 animate-pulse"></i> CHILD SAFETY & CSAM POLICY
           </div>
         </div>
       </div>
@@ -390,36 +608,36 @@
       <!-- Navigation Links -->
       <div class="space-x-4 flex items-center" data-aos="fade-left" data-aos-duration="1000">
         <a href="https://nadeemgamingstudio.github.io/12TestersTestersCommunity" 
-           class="relative group px-5 py-2.5 rounded-xl font-bold transition-all duration-300 overflow-hidden">
+           class="relative group px-5 py-2.5 rounded-xl font-bold transition-all duration-300 overflow-hidden glass-effect hover:shadow-neon-indigo">
           <span class="relative z-10 text-white flex items-center">
             <i class="fas fa-home mr-2"></i> HOME
           </span>
           <div class="absolute inset-0 bg-gradient-to-r from-indigo-custom to-purple-custom opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          <div class="absolute inset-0 border-2 border-indigo-custom rounded-xl"></div>
+          <div class="absolute inset-0 border-2 border-indigo-custom rounded-xl group-hover:border-transparent"></div>
         </a>
         
         <a href="https://nadeemgamingstudio.github.io/Contact" 
-           class="relative group px-5 py-2.5 rounded-xl font-bold transition-all duration-300 overflow-hidden">
+           class="relative group px-5 py-2.5 rounded-xl font-bold transition-all duration-300 overflow-hidden glass-effect hover:shadow-neon-blue">
           <span class="relative z-10 text-white flex items-center">
             <i class="fas fa-phone-alt mr-2"></i> CONTACT
           </span>
           <div class="absolute inset-0 bg-gradient-to-r from-accent-blue to-accent-purple opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          <div class="absolute inset-0 border-2 border-accent-blue rounded-xl"></div>
+          <div class="absolute inset-0 border-2 border-accent-blue rounded-xl group-hover:border-transparent"></div>
         </a>
         
         <!-- Privacy Policy Link -->
         <a href="https://nadeemgamingstudio.github.io/12TestersTestersCommunity/privacypolicy" 
-           class="relative group px-5 py-2.5 rounded-xl font-bold transition-all duration-300 overflow-hidden">
+           class="relative group px-5 py-2.5 rounded-xl font-bold transition-all duration-300 overflow-hidden glass-effect hover:shadow-neon-teal">
           <span class="relative z-10 text-white flex items-center">
             <i class="fas fa-shield-alt mr-2"></i> PRIVACY POLICY
           </span>
           <div class="absolute inset-0 bg-gradient-to-r from-teal-accent to-accent-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          <div class="absolute inset-0 border-2 border-teal-accent rounded-xl"></div>
+          <div class="absolute inset-0 border-2 border-teal-accent rounded-xl group-hover:border-transparent"></div>
         </a>
         
         <!-- Active Child Safety Policy Link -->
         <a href="#" 
-           class="relative group px-5 py-2.5 rounded-xl font-bold transition-all duration-300 overflow-hidden">
+           class="relative group px-5 py-2.5 rounded-xl font-bold transition-all duration-300 overflow-hidden shadow-neon-pink">
           <span class="relative z-10 text-white flex items-center">
             <i class="fas fa-child mr-2"></i> CHILD SAFETY
           </span>
@@ -431,61 +649,70 @@
   </header>
 
   <!-- Main Content Container -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20">
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24">
     
     <!-- Hero Section for Child Safety Policy -->
-    <section class="text-center mb-16" data-aos="fade-up" data-aos-duration="1200">
-      <div class="bg-gradient-dark p-10 rounded-3xl shadow-2xl border border-gray-800 relative overflow-hidden">
-        <div class="absolute -top-20 -right-20 w-60 h-60 bg-teal-accent/10 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-accent-red/10 rounded-full blur-3xl"></div>
+    <section class="text-center mb-20" data-aos="fade-up" data-aos-duration="1200">
+      <div class="gradient-bg p-10 rounded-3xl shadow-2xl border border-gray-800 relative overflow-hidden">
+        <div class="absolute -top-20 -right-20 w-80 h-80 bg-teal-accent/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-accent-red/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent-blue/10 rounded-full blur-3xl"></div>
         
         <div class="relative z-10">
-          <h1 class="text-4xl md:text-5xl font-black mb-6 font-orbitron">
-            <span class="bg-gradient-to-r from-accent-pink to-accent-yellow bg-clip-text text-transparent">
-              <i class="fas fa-child mr-4"></i>CHILD SAFETY & CSAM POLICY
+          <h1 class="text-5xl md:text-6xl font-black mb-8 font-orbitron">
+            <span class="bg-gradient-to-r from-accent-pink via-accent-yellow to-accent-blue bg-clip-text text-transparent animate-gradient">
+              <i class="fas fa-child mr-4 floating-element"></i>CHILD SAFETY & CSAM POLICY
             </span>
           </h1>
           
-          <div class="typewriter text-2xl md:text-3xl font-bold text-white mb-8 max-w-3xl mx-auto">
+          <div class="typewriter text-3xl md:text-4xl font-bold text-white mb-10 max-w-3xl mx-auto">
             12 Testers - Testers Community
           </div>
           
-          <p class="text-xl text-gray-300 max-w-4xl mx-auto mb-10 leading-relaxed">
-            We have a zero-tolerance policy for child sexual abuse material (CSAM), sexual exploitation of minors, or any content that puts children at risk. This page explains our policy, detection practices, reporting process, and our commitment to child safety.
+          <p class="text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+            We maintain a <span class="text-accent-red font-bold">ZERO-TOLERANCE</span> policy for child sexual abuse material (CSAM), sexual exploitation of minors, or any content that puts children at risk. This policy outlines our strict enforcement, detection practices, reporting process, and unwavering commitment to child safety.
           </p>
           
           <!-- Last Updated -->
-          <div class="inline-flex items-center bg-gray-800/50 px-6 py-3 rounded-full border border-accent-pink/30 mb-6">
-            <i class="fas fa-clock text-accent-pink mr-3"></i>
+          <div class="inline-flex items-center glass-effect px-8 py-4 rounded-full border border-accent-pink/40 mb-8 floating-element">
+            <i class="fas fa-clock text-accent-pink mr-3 text-xl"></i>
             <span class="text-gray-300">Effective Date: <span class="font-bold text-accent-yellow" id="currentDate"></span></span>
-            <span class="ml-3 px-3 py-1 bg-accent-red text-white text-xs font-bold rounded-full animate-pulse-slow">ZERO TOLERANCE</span>
+            <span class="ml-4 px-4 py-1.5 bg-gradient-to-r from-accent-red to-accent-pink text-white text-sm font-bold rounded-full animate-pulse-slow flex items-center">
+              <i class="fas fa-ban mr-2"></i> ZERO TOLERANCE
+            </span>
           </div>
           
           <!-- Quick Stats -->
-          <div class="flex flex-wrap justify-center gap-8 mt-10">
-            <div class="text-center p-4 bg-gray-800/50 rounded-2xl border border-gray-700">
-              <div class="text-3xl font-bold text-accent-red mb-2">
+          <div class="flex flex-wrap justify-center gap-10 mt-12">
+            <div class="text-center p-5 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-red transition duration-300 hover:shadow-neon-red">
+              <div class="text-4xl font-bold text-accent-red mb-3 feature-icon">
                 <i class="fas fa-ban"></i>
               </div>
-              <div class="text-sm text-gray-300">Zero Tolerance</div>
+              <div class="text-sm text-gray-300 font-bold">Zero Tolerance</div>
             </div>
-            <div class="text-center p-4 bg-gray-800/50 rounded-2xl border border-gray-700">
-              <div class="text-3xl font-bold text-accent-green mb-2">
+            <div class="text-center p-5 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-green transition duration-300 hover:shadow-neon-green">
+              <div class="text-4xl font-bold text-accent-green mb-3 feature-icon">
                 <i class="fas fa-shield-alt"></i>
               </div>
-              <div class="text-sm text-gray-300">24/7 Monitoring</div>
+              <div class="text-sm text-gray-300 font-bold">24/7 Monitoring</div>
             </div>
-            <div class="text-center p-4 bg-gray-800/50 rounded-2xl border border-gray-700">
-              <div class="text-3xl font-bold text-accent-yellow mb-2">
+            <div class="text-center p-5 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-yellow transition duration-300 hover:shadow-neon-yellow">
+              <div class="text-4xl font-bold text-accent-yellow mb-3 feature-icon">
                 <i class="fas fa-flag"></i>
               </div>
-              <div class="text-sm text-gray-300">Easy Reporting</div>
+              <div class="text-sm text-gray-300 font-bold">Easy Reporting</div>
             </div>
-            <div class="text-center p-4 bg-gray-800/50 rounded-2xl border border-gray-700">
-              <div class="text-3xl font-bold text-accent-blue mb-2">
+            <div class="text-center p-5 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-blue transition duration-300 hover:shadow-neon-blue">
+              <div class="text-4xl font-bold text-accent-blue mb-3 feature-icon">
                 <i class="fas fa-gavel"></i>
               </div>
-              <div class="text-sm text-gray-300">Law Enforcement</div>
+              <div class="text-sm text-gray-300 font-bold">Law Enforcement</div>
+            </div>
+            <div class="text-center p-5 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-purple transition duration-300 hover:shadow-neon-purple">
+              <div class="text-4xl font-bold text-accent-purple mb-3 feature-icon">
+                <i class="fas fa-user-shield"></i>
+              </div>
+              <div class="text-sm text-gray-300 font-bold">User Protection</div>
             </div>
           </div>
         </div>
@@ -493,106 +720,110 @@
     </section>
     
     <!-- Main Content Grid -->
-    <div class="flex flex-col lg:flex-row gap-8">
+    <div class="flex flex-col lg:flex-row gap-10">
       <!-- Table of Contents -->
       <aside class="lg:w-1/3" data-aos="fade-right" data-aos-duration="1000">
-        <div class="sticky top-32 bg-gradient-to-br from-gray-900 to-black p-6 rounded-3xl shadow-2xl border border-gray-800">
-          <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
-            <i class="fas fa-list text-accent-pink mr-3"></i>
+        <div class="sticky top-32 gradient-card p-8 rounded-3xl shadow-2xl border border-gray-800 glass-effect">
+          <h2 class="text-2xl font-bold text-white mb-8 flex items-center">
+            <i class="fas fa-list text-accent-pink mr-3 text-2xl"></i>
             <span class="bg-gradient-to-r from-accent-pink to-accent-yellow bg-clip-text text-transparent">
               Table of Contents
             </span>
           </h2>
           
-          <nav class="space-y-3">
-            <a href="#overview" class="flex items-center p-3 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-accent-pink transition duration-300 group">
-              <div class="w-8 h-8 rounded-full bg-accent-pink/20 flex items-center justify-center text-accent-pink mr-3">
+          <nav class="space-y-4">
+            <a href="#overview" class="flex items-center p-4 bg-gray-800/40 rounded-xl border border-gray-700 hover:border-accent-pink hover:shadow-neon-pink transition duration-300 group">
+              <div class="w-10 h-10 rounded-full bg-accent-pink/20 flex items-center justify-center text-accent-pink mr-4 feature-icon">
                 <i class="fas fa-eye"></i>
               </div>
-              <span class="text-gray-300 group-hover:text-white">Overview</span>
+              <span class="text-gray-300 group-hover:text-white font-medium">Overview</span>
             </a>
             
-            <a href="#policy-statement" class="flex items-center p-3 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-accent-red transition duration-300 group">
-              <div class="w-8 h-8 rounded-full bg-accent-red/20 flex items-center justify-center text-accent-red mr-3">
+            <a href="#policy-statement" class="flex items-center p-4 bg-gray-800/40 rounded-xl border border-gray-700 hover:border-accent-red hover:shadow-neon-red transition duration-300 group">
+              <div class="w-10 h-10 rounded-full bg-accent-red/20 flex items-center justify-center text-accent-red mr-4 feature-icon">
                 <i class="fas fa-gavel"></i>
               </div>
-              <span class="text-gray-300 group-hover:text-white">Policy Statement</span>
+              <span class="text-gray-300 group-hover:text-white font-medium">Policy Statement</span>
             </a>
             
-            <a href="#definitions" class="flex items-center p-3 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-accent-blue transition duration-300 group">
-              <div class="w-8 h-8 rounded-full bg-accent-blue/20 flex items-center justify-center text-accent-blue mr-3">
+            <a href="#definitions" class="flex items-center p-4 bg-gray-800/40 rounded-xl border border-gray-700 hover:border-accent-blue hover:shadow-neon-blue transition duration-300 group">
+              <div class="w-10 h-10 rounded-full bg-accent-blue/20 flex items-center justify-center text-accent-blue mr-4 feature-icon">
                 <i class="fas fa-book"></i>
               </div>
-              <span class="text-gray-300 group-hover:text-white">Key Definitions</span>
+              <span class="text-gray-300 group-hover:text-white font-medium">Key Definitions</span>
             </a>
             
-            <a href="#prohibited-content" class="flex items-center p-3 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-accent-yellow transition duration-300 group">
-              <div class="w-8 h-8 rounded-full bg-accent-yellow/20 flex items-center justify-center text-accent-yellow mr-3">
+            <a href="#prohibited-content" class="flex items-center p-4 bg-gray-800/40 rounded-xl border border-gray-700 hover:border-accent-yellow hover:shadow-neon-yellow transition duration-300 group">
+              <div class="w-10 h-10 rounded-full bg-accent-yellow/20 flex items-center justify-center text-accent-yellow mr-4 feature-icon">
                 <i class="fas fa-ban"></i>
               </div>
-              <span class="text-gray-300 group-hover:text-white">Prohibited Content</span>
+              <span class="text-gray-300 group-hover:text-white font-medium">Prohibited Content</span>
             </a>
             
-            <a href="#upload-restrictions" class="flex items-center p-3 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-teal-accent transition duration-300 group">
-              <div class="w-8 h-8 rounded-full bg-teal-accent/20 flex items-center justify-center text-teal-accent mr-3">
+            <a href="#upload-restrictions" class="flex items-center p-4 bg-gray-800/40 rounded-xl border border-gray-700 hover:border-teal-accent hover:shadow-neon-teal transition duration-300 group">
+              <div class="w-10 h-10 rounded-full bg-teal-accent/20 flex items-center justify-center text-teal-accent mr-4 feature-icon">
                 <i class="fas fa-upload"></i>
               </div>
-              <span class="text-gray-300 group-hover:text-white">Upload Safety Rules</span>
+              <span class="text-gray-300 group-hover:text-white font-medium">Upload Safety Rules</span>
             </a>
             
-            <a href="#detection-moderation" class="flex items-center p-3 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-accent-green transition duration-300 group">
-              <div class="w-8 h-8 rounded-full bg-accent-green/20 flex items-center justify-center text-accent-green mr-3">
+            <a href="#detection-moderation" class="flex items-center p-4 bg-gray-800/40 rounded-xl border border-gray-700 hover:border-accent-green hover:shadow-neon-green transition duration-300 group">
+              <div class="w-10 h-10 rounded-full bg-accent-green/20 flex items-center justify-center text-accent-green mr-4 feature-icon">
                 <i class="fas fa-search"></i>
               </div>
-              <span class="text-gray-300 group-hover:text-white">Detection & Moderation</span>
+              <span class="text-gray-300 group-hover:text-white font-medium">Detection & Moderation</span>
             </a>
             
-            <a href="#reporting" class="flex items-center p-3 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-accent-purple transition duration-300 group">
-              <div class="w-8 h-8 rounded-full bg-accent-purple/20 flex items-center justify-center text-accent-purple mr-3">
+            <a href="#reporting" class="flex items-center p-4 bg-gray-800/40 rounded-xl border border-gray-700 hover:border-accent-purple hover:shadow-neon-purple transition duration-300 group">
+              <div class="w-10 h-10 rounded-full bg-accent-purple/20 flex items-center justify-center text-accent-purple mr-4 feature-icon">
                 <i class="fas fa-flag"></i>
               </div>
-              <span class="text-gray-300 group-hover:text-white">How to Report</span>
+              <span class="text-gray-300 group-hover:text-white font-medium">How to Report</span>
             </a>
             
-            <a href="#investigation-actions" class="flex items-center p-3 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-indigo-custom transition duration-300 group">
-              <div class="w-8 h-8 rounded-full bg-indigo-custom/20 flex items-center justify-center text-indigo-custom mr-3">
+            <a href="#investigation-actions" class="flex items-center p-4 bg-gray-800/40 rounded-xl border border-gray-700 hover:border-indigo-custom hover:shadow-neon-indigo transition duration-300 group">
+              <div class="w-10 h-10 rounded-full bg-indigo-custom/20 flex items-center justify-center text-indigo-custom mr-4 feature-icon">
                 <i class="fas fa-clipboard-check"></i>
               </div>
-              <span class="text-gray-300 group-hover:text-white">Investigation Actions</span>
+              <span class="text-gray-300 group-hover:text-white font-medium">Investigation Actions</span>
             </a>
             
-            <a href="#cooperation" class="flex items-center p-3 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-purple-custom transition duration-300 group">
-              <div class="w-8 h-8 rounded-full bg-purple-custom/20 flex items-center justify-center text-purple-custom mr-3">
+            <a href="#cooperation" class="flex items-center p-4 bg-gray-800/40 rounded-xl border border-gray-700 hover:border-purple-custom hover:shadow-neon-purple transition duration-300 group">
+              <div class="w-10 h-10 rounded-full bg-purple-custom/20 flex items-center justify-center text-purple-custom mr-4 feature-icon">
                 <i class="fas fa-handshake"></i>
               </div>
-              <span class="text-gray-300 group-hover:text-white">Cooperation with Authorities</span>
+              <span class="text-gray-300 group-hover:text-white font-medium">Cooperation with Authorities</span>
             </a>
             
-            <a href="#contact" class="flex items-center p-3 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-accent-pink transition duration-300 group">
-              <div class="w-8 h-8 rounded-full bg-accent-pink/20 flex items-center justify-center text-accent-pink mr-3">
+            <a href="#contact" class="flex items-center p-4 bg-gray-800/40 rounded-xl border border-gray-700 hover:border-accent-pink hover:shadow-neon-pink transition duration-300 group">
+              <div class="w-10 h-10 rounded-full bg-accent-pink/20 flex items-center justify-center text-accent-pink mr-4 feature-icon">
                 <i class="fas fa-envelope"></i>
               </div>
-              <span class="text-gray-300 group-hover:text-white">Contact & Reporting</span>
+              <span class="text-gray-300 group-hover:text-white font-medium">Contact & Reporting</span>
             </a>
           </nav>
           
-          <div class="mt-8 pt-6 border-t border-gray-800">
-            <h3 class="text-lg font-bold text-white mb-3 flex items-center">
-              <i class="fas fa-exclamation-triangle text-accent-yellow mr-2"></i>
+          <div class="mt-10 pt-8 border-t border-gray-800">
+            <h3 class="text-lg font-bold text-white mb-4 flex items-center">
+              <i class="fas fa-exclamation-triangle text-accent-yellow mr-3"></i>
               Critical Safety Notes
             </h3>
-            <ul class="text-sm text-gray-400 space-y-2">
+            <ul class="text-sm text-gray-400 space-y-3">
               <li class="flex items-start">
-                <i class="fas fa-check text-accent-red mr-2 mt-1"></i>
+                <i class="fas fa-check text-accent-red mr-3 mt-1"></i>
                 <span>Never share suspected illegal images - describe and link instead</span>
               </li>
               <li class="flex items-start">
-                <i class="fas fa-check text-accent-red mr-2 mt-1"></i>
+                <i class="fas fa-check text-accent-red mr-3 mt-1"></i>
                 <span>Emergency? Contact local authorities first</span>
               </li>
               <li class="flex items-start">
-                <i class="fas fa-check text-accent-red mr-2 mt-1"></i>
+                <i class="fas fa-check text-accent-red mr-3 mt-1"></i>
                 <span>Reports reviewed 24/7 with highest priority</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-accent-red mr-3 mt-1"></i>
+                <span>All reports are confidential and taken seriously</span>
               </li>
             </ul>
           </div>
@@ -600,11 +831,11 @@
       </aside>
       
       <!-- Child Safety Policy Content -->
-      <div class="lg:w-2/3 space-y-8">
+      <div class="lg:w-2/3 space-y-10">
         <!-- Section 1: Overview -->
-        <section id="overview" class="policy-card bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
-          <div class="flex items-center mb-6">
-            <div class="section-counter bg-gradient-to-r from-accent-pink to-accent-yellow text-white">
+        <section id="overview" class="policy-card p-10 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
+          <div class="flex items-center mb-8">
+            <div class="section-counter bg-gradient-to-r from-accent-pink to-accent-yellow text-white tooltip" data-tooltip="Section 1">
               <i class="fas fa-eye"></i>
             </div>
             <h2 class="text-3xl font-bold text-white">
@@ -614,59 +845,59 @@
             </h2>
           </div>
           
-          <div class="space-y-6">
-            <p class="text-gray-300 leading-relaxed">
-              <strong class="text-white">12 Testers – Testers Community</strong> is committed to maintaining a safe environment for everyone, and we have a zero-tolerance policy for child sexual abuse material (CSAM), sexual exploitation of minors, or any content that puts children at risk. This page explains our policy, detection and moderation practices, reporting process, and the steps we take when we receive reports.
+          <div class="space-y-8">
+            <p class="text-gray-300 leading-relaxed text-lg">
+              <strong class="text-white text-xl">12 Testers – Testers Community</strong> is committed to maintaining a safe environment for everyone, and we have a <span class="text-accent-red font-bold">zero-tolerance policy</span> for child sexual abuse material (CSAM), sexual exploitation of minors, or any content that puts children at risk. This page explains our policy, detection and moderation practices, reporting process, and the steps we take when we receive reports.
             </p>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-              <div class="p-6 bg-gray-800/50 rounded-2xl border-l-4 border-accent-red">
-                <div class="flex items-center mb-4">
-                  <div class="w-12 h-12 rounded-full bg-accent-red/20 flex items-center justify-center text-accent-red mr-4">
-                    <i class="fas fa-ban"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+              <div class="p-7 bg-gray-800/40 rounded-2xl border-l-4 border-accent-red hover:shadow-neon-red transition duration-300">
+                <div class="flex items-center mb-5">
+                  <div class="w-14 h-14 rounded-full bg-accent-red/20 flex items-center justify-center text-accent-red mr-5 feature-icon">
+                    <i class="fas fa-ban text-xl"></i>
                   </div>
                   <h3 class="text-xl font-bold text-white">Zero Tolerance</h3>
                 </div>
-                <p class="text-gray-300">CSAM, sexual exploitation, or grooming content is strictly prohibited.</p>
+                <p class="text-gray-300">CSAM, sexual exploitation, or grooming content is strictly prohibited with immediate permanent bans.</p>
               </div>
               
-              <div class="p-6 bg-gray-800/50 rounded-2xl border-l-4 border-accent-yellow">
-                <div class="flex items-center mb-4">
-                  <div class="w-12 h-12 rounded-full bg-accent-yellow/20 flex items-center justify-center text-accent-yellow mr-4">
-                    <i class="fas fa-flag"></i>
+              <div class="p-7 bg-gray-800/40 rounded-2xl border-l-4 border-accent-yellow hover:shadow-neon-yellow transition duration-300">
+                <div class="flex items-center mb-5">
+                  <div class="w-14 h-14 rounded-full bg-accent-yellow/20 flex items-center justify-center text-accent-yellow mr-5 feature-icon">
+                    <i class="fas fa-flag text-xl"></i>
                   </div>
                   <h3 class="text-xl font-bold text-white">Reporting</h3>
                 </div>
-                <p class="text-gray-300">Easy-report process and rapid response to lawful reports.</p>
+                <p class="text-gray-300">Easy-report process and rapid response to lawful reports within 24 hours.</p>
               </div>
               
-              <div class="p-6 bg-gray-800/50 rounded-2xl border-l-4 border-accent-blue">
-                <div class="flex items-center mb-4">
-                  <div class="w-12 h-12 rounded-full bg-accent-blue/20 flex items-center justify-center text-accent-blue mr-4">
-                    <i class="fas fa-gavel"></i>
+              <div class="p-7 bg-gray-800/40 rounded-2xl border-l-4 border-accent-blue hover:shadow-neon-blue transition duration-300">
+                <div class="flex items-center mb-5">
+                  <div class="w-14 h-14 rounded-full bg-accent-blue/20 flex items-center justify-center text-accent-blue mr-5 feature-icon">
+                    <i class="fas fa-gavel text-xl"></i>
                   </div>
                   <h3 class="text-xl font-bold text-white">Support</h3>
                 </div>
                 <p class="text-gray-300">We cooperate with law enforcement and child-protection agencies when required.</p>
               </div>
               
-              <div class="p-6 bg-gray-800/50 rounded-2xl border-l-4 border-teal-accent">
-                <div class="flex items-center mb-4">
-                  <div class="w-12 h-12 rounded-full bg-teal-accent/20 flex items-center justify-center text-teal-accent mr-4">
-                    <i class="fas fa-shield-alt"></i>
+              <div class="p-7 bg-gray-800/40 rounded-2xl border-l-4 border-teal-accent hover:shadow-neon-teal transition duration-300">
+                <div class="flex items-center mb-5">
+                  <div class="w-14 h-14 rounded-full bg-teal-accent/20 flex items-center justify-center text-teal-accent mr-5 feature-icon">
+                    <i class="fas fa-shield-alt text-xl"></i>
                   </div>
                   <h3 class="text-xl font-bold text-white">Prevention</h3>
                 </div>
-                <p class="text-gray-300">Safe-by-design rules for uploads, messaging and content sharing.</p>
+                <p class="text-gray-300">Safe-by-design rules for uploads, messaging and content sharing with automated scanning.</p>
               </div>
             </div>
           </div>
         </section>
         
         <!-- Section 2: Policy Statement -->
-        <section id="policy-statement" class="policy-card bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
-          <div class="flex items-center mb-6">
-            <div class="section-counter bg-gradient-to-r from-accent-red to-orange-500 text-white">
+        <section id="policy-statement" class="policy-card p-10 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
+          <div class="flex items-center mb-8">
+            <div class="section-counter bg-gradient-to-r from-accent-red to-orange-500 text-white tooltip" data-tooltip="Section 2">
               <i class="fas fa-gavel"></i>
             </div>
             <h2 class="text-3xl font-bold text-white">
@@ -676,27 +907,37 @@
             </h2>
           </div>
           
-          <div class="space-y-6">
-            <p class="text-gray-300 leading-relaxed">
+          <div class="space-y-8">
+            <p class="text-gray-300 leading-relaxed text-lg">
               We do not allow any content that sexualizes children, depicts minors in sexual contexts, or facilitates exploitation. This includes images, video, audio, text, links, or any media that depicts sexual conduct involving persons under 18, or content that meaningfully facilitates access to such material. Any user, developer or third party found to be sharing or seeking CSAM will be banned and reported to appropriate authorities where required by law.
             </p>
             
-            <div class="alert-box p-6 bg-red-900/20 border-red-500 rounded-2xl">
-              <h4 class="text-lg font-bold text-white mb-3 flex items-center">
-                <i class="fas fa-exclamation-triangle text-accent-red mr-3"></i>
+            <div class="alert-box p-8 bg-gradient-to-r from-red-900/30 to-orange-900/30 border-red-500 rounded-2xl">
+              <h4 class="text-xl font-bold text-white mb-4 flex items-center">
+                <i class="fas fa-exclamation-triangle text-accent-red mr-4 text-2xl"></i>
                 Zero Tolerance Enforcement
               </h4>
+              <p class="text-gray-300 text-lg">
+                Violation of this policy results in <span class="text-accent-red font-bold">immediate account termination</span>, removal of all content, and reporting to law enforcement agencies. There are no warnings for CSAM-related violations.
+              </p>
+            </div>
+            
+            <div class="p-6 bg-gray-800/40 rounded-2xl border border-gray-700">
+              <h4 class="text-lg font-bold text-white mb-3 flex items-center">
+                <i class="fas fa-balance-scale text-accent-yellow mr-3"></i>
+                Legal Compliance
+              </h4>
               <p class="text-gray-300">
-                Violation of this policy results in immediate account termination, removal of all content, and reporting to law enforcement agencies. There are no warnings for CSAM-related violations.
+                We comply with all applicable laws including but not limited to the Protection of Children from Sexual Offences (POCSO) Act, 2012, and similar legislation worldwide.
               </p>
             </div>
           </div>
         </section>
         
         <!-- Section 3: Key Definitions -->
-        <section id="definitions" class="policy-card bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
-          <div class="flex items-center mb-6">
-            <div class="section-counter bg-gradient-to-r from-accent-blue to-accent-purple text-white">
+        <section id="definitions" class="policy-card p-10 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
+          <div class="flex items-center mb-8">
+            <div class="section-counter bg-gradient-to-r from-accent-blue to-accent-purple text-white tooltip" data-tooltip="Section 3">
               <i class="fas fa-book"></i>
             </div>
             <h2 class="text-3xl font-bold text-white">
@@ -706,11 +947,11 @@
             </h2>
           </div>
           
-          <div class="space-y-6">
-            <div class="grid md:grid-cols-2 gap-6">
-              <div class="p-6 bg-gray-800/50 rounded-2xl border border-gray-700">
-                <h3 class="text-xl font-bold text-white mb-3 flex items-center">
-                  <i class="fas fa-child text-accent-pink mr-2"></i>
+          <div class="space-y-8">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="p-7 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-pink transition duration-300">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <i class="fas fa-child text-accent-pink mr-3"></i>
                   Child / Minor
                 </h3>
                 <p class="text-gray-300">
@@ -718,29 +959,29 @@
                 </p>
               </div>
               
-              <div class="p-6 bg-gray-800/50 rounded-2xl border border-gray-700">
-                <h3 class="text-xl font-bold text-white mb-3 flex items-center">
-                  <i class="fas fa-exclamation-triangle text-accent-red mr-2"></i>
+              <div class="p-7 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-red transition duration-300">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <i class="fas fa-exclamation-triangle text-accent-red mr-3"></i>
                   CSAM
                 </h3>
                 <p class="text-gray-300">
-                  Child Sexual Abuse Material — any visual depiction of sexual content involving minors.
+                  Child Sexual Abuse Material — any visual depiction of sexually explicit conduct involving minors.
                 </p>
               </div>
               
-              <div class="p-6 bg-gray-800/50 rounded-2xl border border-gray-700">
-                <h3 class="text-xl font-bold text-white mb-3 flex items-center">
-                  <i class="fas fa-user-secret text-accent-yellow mr-2"></i>
+              <div class="p-7 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-yellow transition duration-300">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <i class="fas fa-user-secret text-accent-yellow mr-3"></i>
                   Grooming
                 </h3>
                 <p class="text-gray-300">
-                  Behavior intended to build trust with a minor for sexual exploitation.
+                  Behavior intended to build trust with a minor for sexual exploitation, including online interactions.
                 </p>
               </div>
               
-              <div class="p-6 bg-gray-800/50 rounded-2xl border border-gray-700">
-                <h3 class="text-xl font-bold text-white mb-3 flex items-center">
-                  <i class="fas fa-ban text-accent-red mr-2"></i>
+              <div class="p-7 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-red transition duration-300">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <i class="fas fa-ban text-accent-red mr-3"></i>
                   Sexual Content Involving Minors
                 </h3>
                 <p class="text-gray-300">
@@ -752,9 +993,9 @@
         </section>
         
         <!-- Section 4: Prohibited Content & Actions -->
-        <section id="prohibited-content" class="policy-card bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
-          <div class="flex items-center mb-6">
-            <div class="section-counter bg-gradient-to-r from-accent-yellow to-orange-500 text-white">
+        <section id="prohibited-content" class="policy-card p-10 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
+          <div class="flex items-center mb-8">
+            <div class="section-counter bg-gradient-to-r from-accent-yellow to-orange-500 text-white tooltip" data-tooltip="Section 4">
               <i class="fas fa-ban"></i>
             </div>
             <h2 class="text-3xl font-bold text-white">
@@ -764,44 +1005,44 @@
             </h2>
           </div>
           
-          <div class="space-y-6">
-            <p class="text-gray-300 leading-relaxed">
+          <div class="space-y-8">
+            <p class="text-gray-300 leading-relaxed text-lg">
               Users and developers must not upload, post, share, embed, link to, or request any of the following:
             </p>
             
-            <div class="space-y-4">
-              <div class="flex items-start p-4 bg-gray-800/50 rounded-xl border border-red-500/30">
-                <i class="fas fa-times-circle text-accent-red mr-3 mt-1"></i>
-                <span class="text-gray-300">Images, videos, or audio depicting sexual activity involving minors.</span>
+            <div class="space-y-6">
+              <div class="flex items-start p-5 bg-gradient-to-r from-red-900/20 to-red-800/10 rounded-xl border border-red-500/40">
+                <i class="fas fa-times-circle text-accent-red mr-4 mt-1 text-xl"></i>
+                <span class="text-gray-300 text-lg">Images, videos, or audio depicting sexual activity involving minors.</span>
               </div>
               
-              <div class="flex items-start p-4 bg-gray-800/50 rounded-xl border border-red-500/30">
-                <i class="fas fa-times-circle text-accent-red mr-3 mt-1"></i>
-                <span class="text-gray-300">Altered or generated content (including AI-generated) that sexualizes minors.</span>
+              <div class="flex items-start p-5 bg-gradient-to-r from-red-900/20 to-red-800/10 rounded-xl border border-red-500/40">
+                <i class="fas fa-times-circle text-accent-red mr-4 mt-1 text-xl"></i>
+                <span class="text-gray-300 text-lg">Altered or generated content (including AI-generated) that sexualizes minors.</span>
               </div>
               
-              <div class="flex items-start p-4 bg-gray-800/50 rounded-xl border border-red-500/30">
-                <i class="fas fa-times-circle text-accent-red mr-3 mt-1"></i>
-                <span class="text-gray-300">Advice, instructions, or facilitation for sexual contact with minors or evading law enforcement.</span>
+              <div class="flex items-start p-5 bg-gradient-to-r from-red-900/20 to-red-800/10 rounded-xl border border-red-500/40">
+                <i class="fas fa-times-circle text-accent-red mr-4 mt-1 text-xl"></i>
+                <span class="text-gray-300 text-lg">Advice, instructions, or facilitation for sexual contact with minors or evading law enforcement.</span>
               </div>
               
-              <div class="flex items-start p-4 bg-gray-800/50 rounded-xl border border-red-500/30">
-                <i class="fas fa-times-circle text-accent-red mr-3 mt-1"></i>
-                <span class="text-gray-300">Solicitation, grooming, or attempts to exploit minors.</span>
+              <div class="flex items-start p-5 bg-gradient-to-r from-red-900/20 to-red-800/10 rounded-xl border border-red-500/40">
+                <i class="fas fa-times-circle text-accent-red mr-4 mt-1 text-xl"></i>
+                <span class="text-gray-300 text-lg">Solicitation, grooming, or attempts to exploit minors.</span>
               </div>
               
-              <div class="flex items-start p-4 bg-gray-800/50 rounded-xl border border-red-500/30">
-                <i class="fas fa-times-circle text-accent-red mr-3 mt-1"></i>
-                <span class="text-gray-300">Links to websites or services that host CSAM or that facilitate distribution.</span>
+              <div class="flex items-start p-5 bg-gradient-to-r from-red-900/20 to-red-800/10 rounded-xl border border-red-500/40">
+                <i class="fas fa-times-circle text-accent-red mr-4 mt-1 text-xl"></i>
+                <span class="text-gray-300 text-lg">Links to websites or services that host CSAM or that facilitate distribution.</span>
               </div>
             </div>
           </div>
         </section>
         
         <!-- Section 5: Upload & Listing Safety Rules -->
-        <section id="upload-restrictions" class="policy-card bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
-          <div class="flex items-center mb-6">
-            <div class="section-counter bg-gradient-to-r from-teal-accent to-accent-blue text-white">
+        <section id="upload-restrictions" class="policy-card p-10 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
+          <div class="flex items-center mb-8">
+            <div class="section-counter bg-gradient-to-r from-teal-accent to-accent-blue text-white tooltip" data-tooltip="Section 5">
               <i class="fas fa-upload"></i>
             </div>
             <h2 class="text-3xl font-bold text-white">
@@ -811,39 +1052,39 @@
             </h2>
           </div>
           
-          <div class="space-y-6">
-            <p class="text-gray-300 leading-relaxed">
-              Because Testers Community allows developers to upload icons, screenshots and links, we enforce the following rules:
+          <div class="space-y-8">
+            <p class="text-gray-300 leading-relaxed text-lg">
+              Because Testers Community allows developers to upload icons, screenshots and links, we enforce the following strict rules:
             </p>
             
-            <div class="space-y-4">
-              <div class="flex items-start p-4 bg-gray-800/50 rounded-xl">
-                <i class="fas fa-shield-alt text-teal-accent mr-3 mt-1"></i>
-                <span class="text-gray-300">All uploaded media is scanned for known CSAM signatures and other violations using automated tools where available.</span>
+            <div class="space-y-6">
+              <div class="flex items-start p-5 bg-gray-800/40 rounded-xl hover:bg-gray-800/60 transition duration-300">
+                <i class="fas fa-shield-alt text-teal-accent mr-4 mt-1 text-xl"></i>
+                <span class="text-gray-300 text-lg">All uploaded media is scanned for known CSAM signatures and other violations using automated tools where available.</span>
               </div>
               
-              <div class="flex items-start p-4 bg-gray-800/50 rounded-xl">
-                <i class="fas fa-ban text-accent-red mr-3 mt-1"></i>
-                <span class="text-gray-300">Developers must not include images or screenshots that show minors in sexualized contexts — app listings with such media will be removed immediately.</span>
+              <div class="flex items-start p-5 bg-gray-800/40 rounded-xl hover:bg-gray-800/60 transition duration-300">
+                <i class="fas fa-ban text-accent-red mr-4 mt-1 text-xl"></i>
+                <span class="text-gray-300 text-lg">Developers must not include images or screenshots that show minors in sexualized contexts — app listings with such media will be removed immediately.</span>
               </div>
               
-              <div class="flex items-start p-4 bg-gray-800/50 rounded-xl">
-                <i class="fas fa-link text-accent-blue mr-3 mt-1"></i>
-                <span class="text-gray-300">All links (Google Play testing links, group links) are inspected and may be blocked if they lead to unsafe content.</span>
+              <div class="flex items-start p-5 bg-gray-800/40 rounded-xl hover:bg-gray-800/60 transition duration-300">
+                <i class="fas fa-link text-accent-blue mr-4 mt-1 text-xl"></i>
+                <span class="text-gray-300 text-lg">All links (Google Play testing links, group links) are inspected and may be blocked if they lead to unsafe content.</span>
               </div>
               
-              <div class="flex items-start p-4 bg-gray-800/50 rounded-xl">
-                <i class="fas fa-id-card text-accent-yellow mr-3 mt-1"></i>
-                <span class="text-gray-300">Developers must provide valid contact information and comply with moderation requests.</span>
+              <div class="flex items-start p-5 bg-gray-800/40 rounded-xl hover:bg-gray-800/60 transition duration-300">
+                <i class="fas fa-id-card text-accent-yellow mr-4 mt-1 text-xl"></i>
+                <span class="text-gray-300 text-lg">Developers must provide valid contact information and comply with moderation requests within 24 hours.</span>
               </div>
             </div>
           </div>
         </section>
         
         <!-- Section 6: Detection & Moderation -->
-        <section id="detection-moderation" class="policy-card bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
-          <div class="flex items-center mb-6">
-            <div class="section-counter bg-gradient-to-r from-accent-green to-teal-accent text-white">
+        <section id="detection-moderation" class="policy-card p-10 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
+          <div class="flex items-center mb-8">
+            <div class="section-counter bg-gradient-to-r from-accent-green to-teal-accent text-white tooltip" data-tooltip="Section 6">
               <i class="fas fa-search"></i>
             </div>
             <h2 class="text-3xl font-bold text-white">
@@ -853,25 +1094,25 @@
             </h2>
           </div>
           
-          <div class="space-y-6">
-            <p class="text-gray-300 leading-relaxed">
+          <div class="space-y-8">
+            <p class="text-gray-300 leading-relaxed text-lg">
               We combine automated detection and human review to identify and quickly remove harmful content:
             </p>
             
-            <div class="grid md:grid-cols-2 gap-6">
-              <div class="p-6 bg-gray-800/50 rounded-2xl border border-gray-700">
-                <h3 class="text-xl font-bold text-white mb-3 flex items-center">
-                  <i class="fas fa-robot text-accent-blue mr-2"></i>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="p-7 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-blue transition duration-300">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <i class="fas fa-robot text-accent-blue mr-3"></i>
                   Automatic scanning
                 </h3>
                 <p class="text-gray-300">
-                  Uploaded images and videos are scanned against known illegal image hashes and heuristics.
+                  Uploaded images and videos are scanned against known illegal image hashes and heuristics using industry-standard tools.
                 </p>
               </div>
               
-              <div class="p-6 bg-gray-800/50 rounded-2xl border border-gray-700">
-                <h3 class="text-xl font-bold text-white mb-3 flex items-center">
-                  <i class="fas fa-user-shield text-accent-yellow mr-2"></i>
+              <div class="p-7 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-yellow transition duration-300">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <i class="fas fa-user-shield text-accent-yellow mr-3"></i>
                   Human review
                 </h3>
                 <p class="text-gray-300">
@@ -879,9 +1120,9 @@
                 </p>
               </div>
               
-              <div class="p-6 bg-gray-800/50 rounded-2xl border border-gray-700">
-                <h3 class="text-xl font-bold text-white mb-3 flex items-center">
-                  <i class="fas fa-tachometer-alt text-accent-pink mr-2"></i>
+              <div class="p-7 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-pink transition duration-300">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <i class="fas fa-tachometer-alt text-accent-pink mr-3"></i>
                   Rate-limiting & flags
                 </h3>
                 <p class="text-gray-300">
@@ -889,9 +1130,9 @@
                 </p>
               </div>
               
-              <div class="p-6 bg-gray-800/50 rounded-2xl border border-gray-700">
-                <h3 class="text-xl font-bold text-white mb-3 flex items-center">
-                  <i class="fas fa-user-slash text-accent-red mr-2"></i>
+              <div class="p-7 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-red transition duration-300">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <i class="fas fa-user-slash text-accent-red mr-3"></i>
                   Account checks
                 </h3>
                 <p class="text-gray-300">
@@ -903,9 +1144,9 @@
         </section>
         
         <!-- Section 7: How to Report -->
-        <section id="reporting" class="policy-card bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
-          <div class="flex items-center mb-6">
-            <div class="section-counter bg-gradient-to-r from-accent-purple to-indigo-custom text-white">
+        <section id="reporting" class="policy-card p-10 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
+          <div class="flex items-center mb-8">
+            <div class="section-counter bg-gradient-to-r from-accent-purple to-indigo-custom text-white tooltip" data-tooltip="Section 7">
               <i class="fas fa-flag"></i>
             </div>
             <h2 class="text-3xl font-bold text-white">
@@ -915,61 +1156,61 @@
             </h2>
           </div>
           
-          <div class="space-y-6">
-            <p class="text-gray-300 leading-relaxed">
+          <div class="space-y-8">
+            <p class="text-gray-300 leading-relaxed text-lg">
               If you see content or behavior that you believe depicts or facilitates sexual exploitation of minors, please report immediately. We take all reports seriously and will act to remove illegal material and to notify law enforcement where required.
             </p>
             
-            <div class="p-6 bg-gradient-to-r from-red-900/50 to-orange-900/50 rounded-2xl border-l-4 border-accent-red">
-              <h4 class="text-xl font-bold text-white mb-3 flex items-center">
-                <i class="fas fa-exclamation-triangle text-accent-red mr-3"></i>
+            <div class="p-8 bg-gradient-to-r from-red-900/40 to-orange-900/40 rounded-2xl border-l-4 border-accent-red">
+              <h4 class="text-2xl font-bold text-white mb-4 flex items-center">
+                <i class="fas fa-exclamation-triangle text-accent-red mr-4 text-2xl"></i>
                 Report immediately
               </h4>
-              <p class="text-gray-300">
-                We review urgent reports 24/7 and prioritize potential CSAM. Emergency? Contact local authorities first.
+              <p class="text-gray-300 text-lg">
+                We review urgent reports 24/7 and prioritize potential CSAM. <span class="text-accent-red font-bold">Emergency? Contact local authorities first.</span>
               </p>
             </div>
             
-            <h3 class="text-2xl font-bold text-white mt-8">Reporting Options</h3>
+            <h3 class="text-2xl font-bold text-white mt-10 mb-6">Reporting Options</h3>
             
-            <div class="space-y-6">
-              <div class="p-6 bg-gray-800/50 rounded-2xl border border-gray-700 hover:border-accent-purple transition duration-300">
-                <h4 class="text-xl font-bold text-white mb-3 flex items-center">
-                  <i class="fas fa-flag text-accent-purple mr-3"></i>
+            <div class="space-y-8">
+              <div class="p-8 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-purple hover:shadow-neon-purple transition duration-300">
+                <h4 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <i class="fas fa-flag text-accent-purple mr-4 text-2xl"></i>
                   In-app report
                 </h4>
-                <p class="text-gray-300">
+                <p class="text-gray-300 text-lg">
                   Use the report button available on each app listing or user profile. Select "Safety / Child Exploitation" when prompted.
                 </p>
               </div>
               
-              <div class="p-6 bg-gray-800/50 rounded-2xl border border-gray-700 hover:border-teal-accent transition duration-300">
-                <h4 class="text-xl font-bold text-white mb-3 flex items-center">
-                  <i class="fas fa-envelope text-teal-accent mr-3"></i>
+              <div class="p-8 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-teal-accent hover:shadow-neon-teal transition duration-300">
+                <h4 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <i class="fas fa-envelope text-teal-accent mr-4 text-2xl"></i>
                   Email
                 </h4>
-                <p class="text-gray-300">
-                  Send details to <a href="mailto:nadeemgamer180@gmail.com" class="text-teal-accent hover:underline">nadeemgamer180@gmail.com</a>. Include the URL, username, timestamps, and any supporting screenshots (do NOT attach illegal images; describe them — see below).
+                <p class="text-gray-300 text-lg">
+                  Send details to <a href="mailto:nadeemgamer180@gmail.com" class="text-teal-accent hover:underline font-bold">nadeemgamer180@gmail.com</a>. Include the URL, username, timestamps, and any supporting screenshots (do NOT attach illegal images; describe them — see below).
                 </p>
               </div>
               
-              <div class="p-6 bg-gray-800/50 rounded-2xl border border-gray-700 hover:border-accent-red transition duration-300">
-                <h4 class="text-xl font-bold text-white mb-3 flex items-center">
-                  <i class="fas fa-ambulance text-accent-red mr-3"></i>
+              <div class="p-8 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-red hover:shadow-neon-red transition duration-300">
+                <h4 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <i class="fas fa-ambulance text-accent-red mr-4 text-2xl"></i>
                   Emergency / Law enforcement
                 </h4>
-                <p class="text-gray-300">
+                <p class="text-gray-300 text-lg">
                   If someone is in immediate danger, contact local emergency services first, then notify us.
                 </p>
               </div>
             </div>
             
-            <div class="p-6 bg-gray-800/50 rounded-2xl border border-accent-yellow/30">
-              <h4 class="text-lg font-bold text-white mb-3 flex items-center">
-                <i class="fas fa-exclamation-circle text-accent-yellow mr-3"></i>
+            <div class="p-8 bg-gradient-to-r from-yellow-900/30 to-yellow-800/20 rounded-2xl border border-accent-yellow/50">
+              <h4 class="text-xl font-bold text-white mb-4 flex items-center">
+                <i class="fas fa-exclamation-circle text-accent-yellow mr-4 text-2xl"></i>
                 Important Safety Notice
               </h4>
-              <p class="text-gray-300">
+              <p class="text-gray-300 text-lg">
                 <strong class="text-white">Do NOT share or forward suspected illegal images or videos.</strong> Instead, provide descriptions, timestamps, and links. If you must submit a file for review, contact us first and we will provide secure instructions. We will never ask you to distribute illegal imagery.
               </p>
             </div>
@@ -977,9 +1218,9 @@
         </section>
         
         <!-- Section 8: Investigation Actions -->
-        <section id="investigation-actions" class="policy-card bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
-          <div class="flex items-center mb-6">
-            <div class="section-counter bg-gradient-to-r from-indigo-custom to-purple-custom text-white">
+        <section id="investigation-actions" class="policy-card p-10 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
+          <div class="flex items-center mb-8">
+            <div class="section-counter bg-gradient-to-r from-indigo-custom to-purple-custom text-white tooltip" data-tooltip="Section 8">
               <i class="fas fa-clipboard-check"></i>
             </div>
             <h2 class="text-3xl font-bold text-white">
@@ -989,69 +1230,69 @@
             </h2>
           </div>
           
-          <div class="space-y-6">
-            <p class="text-gray-300 leading-relaxed">
+          <div class="space-y-8">
+            <p class="text-gray-300 leading-relaxed text-lg">
               When a valid report is received we follow a standard escalation procedure:
             </p>
             
-            <div class="grid md:grid-cols-2 gap-6">
-              <div class="p-6 bg-gray-800/50 rounded-2xl border border-gray-700">
-                <h4 class="text-lg font-bold text-white mb-3 flex items-center">
-                  <i class="fas fa-trash text-accent-red mr-2"></i>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="p-7 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-red transition duration-300">
+                <h4 class="text-lg font-bold text-white mb-4 flex items-center">
+                  <i class="fas fa-trash text-accent-red mr-3"></i>
                   Immediate Removal
                 </h4>
-                <p class="text-gray-300 text-sm">
+                <p class="text-gray-300">
                   Immediate removal or disabling of content that appears to violate this policy.
                 </p>
               </div>
               
-              <div class="p-6 bg-gray-800/50 rounded-2xl border border-gray-700">
-                <h4 class="text-lg font-bold text-white mb-3 flex items-center">
-                  <i class="fas fa-user-slash text-accent-yellow mr-2"></i>
+              <div class="p-7 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-yellow transition duration-300">
+                <h4 class="text-lg font-bold text-white mb-4 flex items-center">
+                  <i class="fas fa-user-slash text-accent-yellow mr-3"></i>
                   Account Suspension
                 </h4>
-                <p class="text-gray-300 text-sm">
+                <p class="text-gray-300">
                   Temporary suspension of accounts pending investigation.
                 </p>
               </div>
               
-              <div class="p-6 bg-gray-800/50 rounded-2xl border border-gray-700">
-                <h4 class="text-lg font-bold text-white mb-3 flex items-center">
-                  <i class="fas fa-save text-accent-blue mr-2"></i>
+              <div class="p-7 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-blue transition duration-300">
+                <h4 class="text-lg font-bold text-white mb-4 flex items-center">
+                  <i class="fas fa-save text-accent-blue mr-3"></i>
                   Evidence Preservation
                 </h4>
-                <p class="text-gray-300 text-sm">
+                <p class="text-gray-300">
                   Preservation of forensic logs and metadata for lawful requests.
                 </p>
               </div>
               
-              <div class="p-6 bg-gray-800/50 rounded-2xl border border-gray-700">
-                <h4 class="text-lg font-bold text-white mb-3 flex items-center">
-                  <i class="fas fa-gavel text-accent-purple mr-2"></i>
+              <div class="p-7 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-purple transition duration-300">
+                <h4 class="text-lg font-bold text-white mb-4 flex items-center">
+                  <i class="fas fa-gavel text-accent-purple mr-3"></i>
                   Law Enforcement Notification
                 </h4>
-                <p class="text-gray-300 text-sm">
+                <p class="text-gray-300">
                   Notification to appropriate law enforcement or child-protection agencies where required by law or where serious risk is identified.
                 </p>
               </div>
             </div>
             
-            <div class="p-6 bg-red-900/20 rounded-2xl border border-red-500/30">
-              <h4 class="text-lg font-bold text-white mb-3 flex items-center">
-                <i class="fas fa-user-times text-accent-red mr-3"></i>
+            <div class="p-8 bg-gradient-to-r from-red-900/40 to-pink-900/30 rounded-2xl border border-red-500/40">
+              <h4 class="text-xl font-bold text-white mb-4 flex items-center">
+                <i class="fas fa-user-times text-accent-red mr-4 text-2xl"></i>
                 Permanent Bans
               </h4>
-              <p class="text-gray-300">
-                Permanent bans for accounts found to be distributing or intentionally facilitating CSAM or exploitation. No warnings or second chances.
+              <p class="text-gray-300 text-lg">
+                Permanent bans for accounts found to be distributing or intentionally facilitating CSAM or exploitation. <span class="text-accent-red font-bold">No warnings or second chances.</span>
               </p>
             </div>
           </div>
         </section>
         
         <!-- Section 9: Cooperation with Authorities -->
-        <section id="cooperation" class="policy-card bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
-          <div class="flex items-center mb-6">
-            <div class="section-counter bg-gradient-to-r from-purple-custom to-pink-500 text-white">
+        <section id="cooperation" class="policy-card p-10 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
+          <div class="flex items-center mb-8">
+            <div class="section-counter bg-gradient-to-r from-purple-custom to-pink-500 text-white tooltip" data-tooltip="Section 9">
               <i class="fas fa-handshake"></i>
             </div>
             <h2 class="text-3xl font-bold text-white">
@@ -1061,17 +1302,17 @@
             </h2>
           </div>
           
-          <div class="space-y-6">
-            <p class="text-gray-300 leading-relaxed">
+          <div class="space-y-8">
+            <p class="text-gray-300 leading-relaxed text-lg">
               We comply with applicable laws and cooperate with lawful requests from law enforcement and child-protection agencies. We maintain processes to respond to legal orders for user data and to preserve evidence when requested.
             </p>
             
-            <div class="p-6 bg-gray-800/50 rounded-2xl">
-              <h4 class="text-xl font-bold text-white mb-3 flex items-center">
-                <i class="fas fa-balance-scale text-accent-yellow mr-3"></i>
+            <div class="p-8 bg-gray-800/40 rounded-2xl border border-gray-700 hover:border-accent-yellow transition duration-300">
+              <h4 class="text-xl font-bold text-white mb-4 flex items-center">
+                <i class="fas fa-balance-scale text-accent-yellow mr-4 text-2xl"></i>
                 Legal Compliance
               </h4>
-              <p class="text-gray-300">
+              <p class="text-gray-300 text-lg">
                 Where we are legally obliged to report or where safety concerns demand it, we will share relevant information (account metadata, IP addresses, timestamps) with authorities. We will comply with court orders and legal process.
               </p>
             </div>
@@ -1079,9 +1320,9 @@
         </section>
         
         <!-- Section 10: Contact & Immediate Reporting -->
-        <section id="contact" class="policy-card bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
-          <div class="flex items-center mb-6">
-            <div class="section-counter bg-gradient-to-r from-accent-pink to-accent-red text-white">
+        <section id="contact" class="policy-card p-10 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
+          <div class="flex items-center mb-8">
+            <div class="section-counter bg-gradient-to-r from-accent-pink to-accent-red text-white tooltip" data-tooltip="Section 10">
               <i class="fas fa-envelope"></i>
             </div>
             <h2 class="text-3xl font-bold text-white">
@@ -1091,47 +1332,47 @@
             </h2>
           </div>
           
-          <div class="space-y-6">
-            <p class="text-gray-300 leading-relaxed">
+          <div class="space-y-8">
+            <p class="text-gray-300 leading-relaxed text-lg">
               If you need to contact us about child safety, suspected CSAM, or urgent concerns — contact our safety team immediately:
             </p>
             
-            <div class="grid md:grid-cols-2 gap-6">
-              <div class="p-6 bg-gray-800/50 rounded-2xl">
-                <div class="flex items-center mb-4">
-                  <i class="fas fa-envelope text-accent-pink text-2xl mr-3"></i>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="p-8 bg-gray-800/40 rounded-2xl hover:bg-gray-800/60 transition duration-300">
+                <div class="flex items-center mb-5">
+                  <i class="fas fa-envelope text-accent-pink text-3xl mr-5"></i>
                   <div>
-                    <div class="font-bold text-white">Email (Safety Reports)</div>
-                    <a href="mailto:nadeemgamer180@gmail.com" class="text-teal-accent hover:underline">nadeemgamer180@gmail.com</a>
+                    <div class="font-bold text-white text-xl">Email (Safety Reports)</div>
+                    <a href="mailto:nadeemgamer180@gmail.com" class="text-teal-accent hover:underline text-lg font-medium">nadeemgamer180@gmail.com</a>
                   </div>
                 </div>
               </div>
               
-              <div class="p-6 bg-gray-800/50 rounded-2xl">
-                <div class="flex items-center mb-4">
-                  <i class="fas fa-flag text-accent-purple text-2xl mr-3"></i>
+              <div class="p-8 bg-gray-800/40 rounded-2xl hover:bg-gray-800/60 transition duration-300">
+                <div class="flex items-center mb-5">
+                  <i class="fas fa-flag text-accent-purple text-3xl mr-5"></i>
                   <div>
-                    <div class="font-bold text-white">In-app report</div>
+                    <div class="font-bold text-white text-xl">In-app report</div>
                     <div class="text-gray-300">Use the report button and choose "Safety / Child Exploitation".</div>
                   </div>
                 </div>
               </div>
               
-              <div class="p-6 bg-gray-800/50 rounded-2xl md:col-span-2">
-                <div class="flex items-center mb-4">
-                  <i class="fas fa-ambulance text-accent-red text-2xl mr-3"></i>
+              <div class="p-8 bg-gray-800/40 rounded-2xl md:col-span-2 hover:bg-gray-800/60 transition duration-300">
+                <div class="flex items-center mb-5">
+                  <i class="fas fa-ambulance text-accent-red text-3xl mr-5"></i>
                   <div>
-                    <div class="font-bold text-white">For emergencies</div>
+                    <div class="font-bold text-white text-xl">For emergencies</div>
                     <div class="text-gray-300">Contact your local law enforcement first, then email us so we can assist.</div>
                   </div>
                 </div>
               </div>
             </div>
             
-            <div class="mt-8 text-center">
-              <a href="mailto:nadeemgamer180@gmail.com" 
-                 class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-accent-pink to-accent-red text-white font-bold rounded-xl hover:shadow-neon-red transition-all duration-300 transform hover:scale-105">
-                <i class="fas fa-exclamation-triangle text-xl mr-3"></i>
+            <div class="mt-10 text-center">
+              <a href="mailto:nadeemgamer180@gmail.com?subject=URGENT:%20Child%20Safety%20Report&body=Please%20describe%20the%20issue%20without%20attaching%20any%20files..." 
+                 class="inline-flex items-center px-10 py-5 bg-gradient-to-r from-accent-pink to-accent-red text-white font-bold rounded-2xl hover:shadow-glow transition-all duration-300 transform hover:scale-105 text-xl">
+                <i class="fas fa-exclamation-triangle text-2xl mr-4"></i>
                 Report Safety Issue Immediately
               </a>
             </div>
@@ -1139,9 +1380,9 @@
         </section>
         
         <!-- Quick Reference Section -->
-        <section class="policy-card bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
-          <div class="flex items-center mb-6">
-            <div class="section-counter bg-gradient-to-r from-accent-yellow to-orange-500 text-white">
+        <section class="policy-card p-10 rounded-3xl shadow-2xl border border-gray-800" data-aos="fade-up">
+          <div class="flex items-center mb-8">
+            <div class="section-counter bg-gradient-to-r from-accent-yellow to-orange-500 text-white tooltip" data-tooltip="Quick Reference">
               <i class="fas fa-lightbulb"></i>
             </div>
             <h2 class="text-3xl font-bold text-white">
@@ -1151,45 +1392,53 @@
             </h2>
           </div>
           
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="p-6 bg-gray-800/50 rounded-2xl border border-gray-700">
-              <h4 class="text-lg font-bold text-white mb-3 flex items-center">
-                <i class="fas fa-check-circle text-accent-green mr-2"></i>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="p-8 bg-gradient-to-r from-green-900/20 to-teal-900/20 rounded-2xl border border-gray-700 hover:border-accent-green transition duration-300">
+              <h4 class="text-xl font-bold text-white mb-5 flex items-center">
+                <i class="fas fa-check-circle text-accent-green mr-4"></i>
                 Do This
               </h4>
-              <ul class="space-y-2">
+              <ul class="space-y-4">
                 <li class="flex items-start">
-                  <i class="fas fa-check text-accent-green text-xs mr-2 mt-1"></i>
-                  <span class="text-gray-300 text-sm">Report immediately if you suspect any violation</span>
+                  <i class="fas fa-check text-accent-green text-lg mr-3 mt-1"></i>
+                  <span class="text-gray-300">Report immediately if you suspect any violation</span>
                 </li>
                 <li class="flex items-start">
-                  <i class="fas fa-check text-accent-green text-xs mr-2 mt-1"></i>
-                  <span class="text-gray-300 text-sm">Provide descriptions and URLs, not illegal content</span>
+                  <i class="fas fa-check text-accent-green text-lg mr-3 mt-1"></i>
+                  <span class="text-gray-300">Provide descriptions and URLs, not illegal content</span>
                 </li>
                 <li class="flex items-start">
-                  <i class="fas fa-check text-accent-green text-xs mr-2 mt-1"></i>
-                  <span class="text-gray-300 text-sm">Contact authorities first in emergencies</span>
+                  <i class="fas fa-check text-accent-green text-lg mr-3 mt-1"></i>
+                  <span class="text-gray-300">Contact authorities first in emergencies</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-accent-green text-lg mr-3 mt-1"></i>
+                  <span class="text-gray-300">Preserve evidence (screenshots, links) for reporting</span>
                 </li>
               </ul>
             </div>
             
-            <div class="p-6 bg-gray-800/50 rounded-2xl border border-gray-700">
-              <h4 class="text-lg font-bold text-white mb-3 flex items-center">
-                <i class="fas fa-times-circle text-accent-red mr-2"></i>
+            <div class="p-8 bg-gradient-to-r from-red-900/20 to-pink-900/20 rounded-2xl border border-gray-700 hover:border-accent-red transition duration-300">
+              <h4 class="text-xl font-bold text-white mb-5 flex items-center">
+                <i class="fas fa-times-circle text-accent-red mr-4"></i>
                 Don't Do This
               </h4>
-              <ul class="space-y-2">
+              <ul class="space-y-4">
                 <li class="flex items-start">
-                  <i class="fas fa-times text-accent-red text-xs mr-2 mt-1"></i>
-                  <span class="text-gray-300 text-sm">Don't forward or share suspected illegal content</span>
+                  <i class="fas fa-times text-accent-red text-lg mr-3 mt-1"></i>
+                  <span class="text-gray-300">Don't forward or share suspected illegal content</span>
                 </li>
                 <li class="flex items-start">
-                  <i class="fas fa-times text-accent-red text-xs mr-2 mt-1"></i>
-                  <span class="text-gray-300 text-sm">Don't attempt to investigate on your own</span>
+                  <i class="fas fa-times text-accent-red text-lg mr-3 mt-1"></i>
+                  <span class="text-gray-300">Don't attempt to investigate on your own</span>
                 </li>
                 <li class="flex items-start">
-                  <i class="fas fa-times text-accent-red text-xs mr-2 mt-1"></i>
-                  <span class="text-gray-300 text-sm">Don't ignore suspicious activity</span>
+                  <i class="fas fa-times text-accent-red text-lg mr-3 mt-1"></i>
+                  <span class="text-gray-300">Don't ignore suspicious activity</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-times text-accent-red text-lg mr-3 mt-1"></i>
+                  <span class="text-gray-300">Don't engage with suspected offenders</span>
                 </li>
               </ul>
             </div>
@@ -1199,36 +1448,39 @@
     </div>
     
     <!-- Final Call to Action -->
-    <section class="mt-16 text-center" data-aos="zoom-in" data-aos-duration="1000">
-      <div class="bg-gradient-to-r from-accent-pink/10 to-accent-red/10 p-10 rounded-3xl border-2 border-dashed border-accent-pink/50">
-        <h3 class="text-3xl font-bold text-white mb-6">
+    <section class="mt-20 text-center" data-aos="zoom-in" data-aos-duration="1000">
+      <div class="gradient-bg p-12 rounded-3xl border-2 border-dashed border-accent-pink/50 relative overflow-hidden">
+        <div class="absolute -top-10 -left-10 w-40 h-40 bg-accent-pink/10 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-accent-blue/10 rounded-full blur-3xl animate-pulse-slow"></div>
+        
+        <h3 class="text-4xl font-bold text-white mb-8">
           Protecting Children is Everyone's Responsibility
         </h3>
-        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+        <p class="text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">
           If you see something that puts a child at risk, say something immediately. Your report could save a child from harm.
         </p>
         
-        <div class="flex flex-col sm:flex-row justify-center gap-6">
-          <a href="mailto:nadeemgamer180@gmail.com" 
-             class="px-8 py-4 bg-gradient-to-r from-accent-pink to-accent-red text-white font-bold rounded-xl hover:shadow-neon-red transition-all duration-300 transform hover:scale-105">
+        <div class="flex flex-col sm:flex-row justify-center gap-8">
+          <a href="mailto:nadeemgamer180@gmail.com?subject=URGENT:%20Child%20Safety%20Report&body=Please%20describe%20the%20issue%20without%20attaching%20any%20files..." 
+             class="px-12 py-6 bg-gradient-to-r from-accent-pink to-accent-red text-white font-bold rounded-2xl hover:shadow-glow transition-all duration-300 transform hover:scale-105 text-xl">
             <span class="flex items-center justify-center">
-              <i class="fas fa-exclamation-triangle text-xl mr-3"></i>
+              <i class="fas fa-exclamation-triangle text-2xl mr-4"></i>
               Report Child Safety Concern
             </span>
           </a>
           
           <a href="https://nadeemgamingstudio.github.io/12TestersTestersCommunity" 
-             class="px-8 py-4 bg-gray-800 text-white font-bold rounded-xl border-2 border-gray-700 hover:border-teal-accent hover:shadow-neon-teal transition-all duration-300">
+             class="px-12 py-6 glass-effect text-white font-bold rounded-2xl border-2 border-gray-700 hover:border-teal-accent hover:shadow-neon-teal transition-all duration-300 text-xl">
             <span class="flex items-center justify-center">
-              <i class="fas fa-home text-xl mr-3"></i>
+              <i class="fas fa-home text-2xl mr-4"></i>
               Back to Home
             </span>
           </a>
         </div>
         
-        <div class="mt-8 text-gray-400 text-sm">
-          <p>
-            <i class="fas fa-shield-alt text-accent-yellow mr-2 animate-pulse"></i>
+        <div class="mt-12 text-gray-400 text-lg">
+          <p class="flex items-center justify-center">
+            <i class="fas fa-shield-alt text-accent-yellow mr-3 text-2xl animate-pulse"></i>
             Thank you for helping us maintain a safe environment for everyone in the 12 Testers community!
           </p>
         </div>
@@ -1237,17 +1489,20 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-secondary-bg border-t-2 border-accent-pink/30 py-10 mt-20">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid md:grid-cols-4 gap-10 mb-10">
+  <footer class="bg-secondary-bg border-t-2 border-accent-pink/30 py-12 mt-24 relative overflow-hidden">
+    <div class="absolute -top-20 -left-20 w-60 h-60 bg-accent-pink/5 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-20 -right-20 w-60 h-60 bg-accent-blue/5 rounded-full blur-3xl"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
         <div>
-          <div class="flex items-center space-x-3 mb-6">
+          <div class="flex items-center space-x-4 mb-8">
             <img src="https://raw.githubusercontent.com/nadeemgamingstudio/Icons/refs/heads/main/12TestersTestersCommunity.png" 
                  alt="12 Testers Logo" 
-                 class="h-12 w-12 rounded-xl border-2 border-accent-yellow">
+                 class="h-14 w-14 rounded-xl border-2 border-accent-yellow p-1 animate-spin-slow">
             <div>
-              <span class="text-xl font-black tracking-wider text-white font-orbitron">12 TESTERS</span>
-              <div class="text-xs text-accent-blue font-bold tracking-widest uppercase mt-0.5">
+              <span class="text-2xl font-black tracking-wider text-white font-orbitron">12 TESTERS</span>
+              <div class="text-xs text-accent-blue font-bold tracking-widest uppercase mt-1">
                 TESTERS COMMUNITY
               </div>
             </div>
@@ -1258,97 +1513,129 @@
         </div>
         
         <div>
-          <h4 class="text-lg font-bold text-white mb-6 border-l-4 border-accent-pink pl-3">Quick Links</h4>
-          <ul class="space-y-3">
-            <li><a href="https://nadeemgamingstudio.github.io/12TestersTestersCommunity" class="text-gray-400 hover:text-teal-accent transition duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Home</a></li>
-            <li><a href="https://nadeemgamingstudio.github.io/Contact" class="text-gray-400 hover:text-accent-yellow transition duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Contact</a></li>
-            <li><a href="https://nadeemgamingstudio.github.io/12TestersTestersCommunity/privacypolicy" class="text-gray-400 hover:text-accent-green transition duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Privacy Policy</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-accent-pink transition duration-300 flex items-center text-accent-pink font-bold"><i class="fas fa-chevron-right text-xs mr-2 text-accent-pink"></i> Child Safety Policy</a></li>
+          <h4 class="text-lg font-bold text-white mb-8 border-l-4 border-accent-pink pl-4">Quick Links</h4>
+          <ul class="space-y-4">
+            <li><a href="https://nadeemgamingstudio.github.io/12TestersTestersCommunity" class="text-gray-400 hover:text-teal-accent transition duration-300 flex items-center group"><i class="fas fa-chevron-right text-xs mr-3 group-hover:translate-x-2 transition-transform"></i> Home</a></li>
+            <li><a href="https://nadeemgamingstudio.github.io/Contact" class="text-gray-400 hover:text-accent-yellow transition duration-300 flex items-center group"><i class="fas fa-chevron-right text-xs mr-3 group-hover:translate-x-2 transition-transform"></i> Contact</a></li>
+            <li><a href="https://nadeemgamingstudio.github.io/12TestersTestersCommunity/privacypolicy" class="text-gray-400 hover:text-accent-green transition duration-300 flex items-center group"><i class="fas fa-chevron-right text-xs mr-3 group-hover:translate-x-2 transition-transform"></i> Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-accent-pink transition duration-300 flex items-center group text-accent-pink font-bold"><i class="fas fa-chevron-right text-xs mr-3 text-accent-pink group-hover:translate-x-2 transition-transform"></i> Child Safety Policy</a></li>
           </ul>
         </div>
         
         <div>
-          <h4 class="text-lg font-bold text-white mb-6 border-l-4 border-accent-red pl-3">Safety Resources</h4>
-          <ul class="space-y-3">
-            <li><a href="#" class="text-gray-400 hover:text-accent-pink transition duration-300 flex items-center"><i class="fas fa-file-contract text-xs mr-2"></i> Child Safety Policy</a></li>
-            <li><a href="mailto:nadeemgamer180@gmail.com" class="text-gray-400 hover:text-accent-red transition duration-300 flex items-center"><i class="fas fa-envelope text-xs mr-2"></i> Safety Report Email</a></li>
-            <li><a href="https://play.google.com/store/apps/details?id=com.nadeemgs.testerscommunity" target="_blank" class="text-gray-400 hover:text-accent-blue transition duration-300 flex items-center"><i class="fab fa-google-play text-xs mr-2"></i> Google Play Listing</a></li>
+          <h4 class="text-lg font-bold text-white mb-8 border-l-4 border-accent-red pl-4">Safety Resources</h4>
+          <ul class="space-y-4">
+            <li><a href="#" class="text-gray-400 hover:text-accent-pink transition duration-300 flex items-center"><i class="fas fa-file-contract text-sm mr-3"></i> Child Safety Policy</a></li>
+            <li><a href="mailto:nadeemgamer180@gmail.com" class="text-gray-400 hover:text-accent-red transition duration-300 flex items-center"><i class="fas fa-envelope text-sm mr-3"></i> Safety Report Email</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.nadeemgs.testerscommunity" target="_blank" class="text-gray-400 hover:text-accent-blue transition duration-300 flex items-center"><i class="fab fa-google-play text-sm mr-3"></i> Google Play Listing</a></li>
           </ul>
         </div>
         
         <div>
-          <h4 class="text-lg font-bold text-white mb-6 border-l-4 border-accent-yellow pl-3">Connect With Us</h4>
-          <div class="flex space-x-4 mb-6">
-            <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-indigo-custom hover:shadow-neon-indigo transition duration-300 transform hover:scale-110">
-              <i class="fab fa-twitter"></i>
+          <h4 class="text-lg font-bold text-white mb-8 border-l-4 border-accent-yellow pl-4">Connect With Us</h4>
+          <div class="flex space-x-5 mb-8">
+            <a href="#" class="w-14 h-14 rounded-full glass-effect flex items-center justify-center text-white hover:bg-indigo-custom hover:shadow-neon-indigo transition duration-300 transform hover:scale-110">
+              <i class="fab fa-twitter text-xl"></i>
             </a>
-            <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-accent-red hover:shadow-neon-red transition duration-300 transform hover:scale-110">
-              <i class="fab fa-youtube"></i>
+            <a href="#" class="w-14 h-14 rounded-full glass-effect flex items-center justify-center text-white hover:bg-accent-red hover:shadow-neon-red transition duration-300 transform hover:scale-110">
+              <i class="fab fa-youtube text-xl"></i>
             </a>
-            <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-accent-blue hover:shadow-neon-blue transition duration-300 transform hover:scale-110">
-              <i class="fab fa-discord"></i>
+            <a href="#" class="w-14 h-14 rounded-full glass-effect flex items-center justify-center text-white hover:bg-accent-blue hover:shadow-neon-blue transition duration-300 transform hover:scale-110">
+              <i class="fab fa-discord text-xl"></i>
             </a>
-            <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-accent-purple hover:shadow-neon-purple transition duration-300 transform hover:scale-110">
-              <i class="fab fa-github"></i>
+            <a href="#" class="w-14 h-14 rounded-full glass-effect flex items-center justify-center text-white hover:bg-accent-purple hover:shadow-neon-purple transition duration-300 transform hover:scale-110">
+              <i class="fab fa-github text-xl"></i>
             </a>
           </div>
-          <p class="text-gray-400 text-sm flex items-center">
-            <i class="fas fa-envelope text-accent-pink mr-2"></i>
+          <p class="text-gray-400 text-sm flex items-center mb-3">
+            <i class="fas fa-envelope text-accent-pink mr-3"></i>
             nadeemgamer180@gmail.com
           </p>
-          <p class="text-gray-400 text-sm flex items-center mt-2">
-            <i class="fas fa-globe text-accent-blue mr-2"></i>
+          <p class="text-gray-400 text-sm flex items-center">
+            <i class="fas fa-globe text-accent-blue mr-3"></i>
             https://nadeemgamingstudio.github.io
           </p>
         </div>
       </div>
       
-      <div class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+      <div class="pt-10 border-t border-gray-800 text-center text-gray-500 text-sm">
         <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="mb-4 md:mb-0">
+          <div class="mb-6 md:mb-0">
             &copy; <span id="currentYear"></span> <span class="text-accent-pink font-bold">12 Testers - Testers Community</span>. All Rights Reserved.
           </div>
-          <div>
-            <span class="text-accent-red">ZERO TOLERANCE</span> for CSAM and child exploitation
+          <div class="flex items-center">
+            <i class="fas fa-shield-alt text-accent-red mr-3"></i>
+            <span class="text-accent-red font-bold">ZERO TOLERANCE</span> for CSAM and child exploitation
           </div>
         </div>
-        <div class="mt-4 text-xs text-gray-600">
-          Effective Date: <span id="effectiveDate"></span>
+        <div class="mt-6 text-xs text-gray-600">
+          Effective Date: <span id="effectiveDate" class="text-accent-yellow"></span> | Last Updated: <span id="lastUpdated" class="text-accent-yellow"></span>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- Enhanced JavaScript -->
   <script>
     // Initialize AOS (Animate On Scroll)
     document.addEventListener('DOMContentLoaded', function() {
       AOS.init({
         duration: 1000,
         once: false,
-        offset: 100
+        offset: 100,
+        easing: 'ease-in-out',
+        mirror: true
       });
       
       // Set current date
-      const currentDate = new Date().toLocaleDateString('en-US', { 
+      const currentDate = new Date();
+      const formattedDate = currentDate.toLocaleDateString('en-US', { 
         year: 'numeric', 
         month: 'long', 
         day: 'numeric' 
       });
-      document.getElementById('currentDate').textContent = currentDate;
-      document.getElementById('effectiveDate').textContent = currentDate;
+      
+      document.getElementById('currentDate').textContent = formattedDate;
+      document.getElementById('effectiveDate').textContent = formattedDate;
+      document.getElementById('lastUpdated').textContent = formattedDate;
       
       // Set current year
-      document.getElementById('currentYear').textContent = new Date().getFullYear();
+      document.getElementById('currentYear').textContent = currentDate.getFullYear();
       
-      // Scroll to Top Button
+      // Enhanced Scroll to Top Button
       const scrollTopBtn = document.getElementById('scrollTopBtn');
+      const loadingBar = document.getElementById('loadingBar');
       
+      // Loading bar animation
+      setTimeout(() => {
+        loadingBar.style.width = '100%';
+        loadingBar.style.transition = 'width 1.5s ease';
+        
+        setTimeout(() => {
+          loadingBar.style.opacity = '0';
+          loadingBar.style.transition = 'opacity 0.5s ease';
+          
+          setTimeout(() => {
+            loadingBar.style.display = 'none';
+          }, 500);
+        }, 1500);
+      }, 100);
+      
+      // Scroll events
       window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
+        // Scroll to top button
+        if (window.pageYOffset > 500) {
           scrollTopBtn.classList.add('active');
         } else {
           scrollTopBtn.classList.remove('active');
+        }
+        
+        // Progress indicator
+        const progressFill = document.getElementById('progressFill');
+        if (progressFill) {
+          const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const scrolled = (window.pageYOffset / windowHeight) * 100;
+          progressFill.style.height = scrolled + '%';
         }
       });
       
@@ -1359,7 +1646,7 @@
         });
       });
       
-      // Smooth scrolling for table of contents links
+      // Enhanced smooth scrolling for table of contents links
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
           e.preventDefault();
@@ -1369,8 +1656,14 @@
           
           const targetElement = document.querySelector(targetId);
           if (targetElement) {
+            // Add active class to current section in TOC
+            document.querySelectorAll('nav a').forEach(link => {
+              link.classList.remove('bg-gray-800', 'border-accent-pink');
+            });
+            this.classList.add('bg-gray-800', 'border-accent-pink');
+            
             window.scrollTo({
-              top: targetElement.offsetTop - 100,
+              top: targetElement.offsetTop - 120,
               behavior: 'smooth'
             });
           }
@@ -1379,49 +1672,51 @@
       
       // Enhanced Particle Effect
       const particlesContainer = document.querySelector('.particles');
-      const colors = ['#4F46E5', '#7C3AED', '#00bfa6', '#FBD534', '#FF0066', '#00D4FF', '#FF0000'];
+      const colors = ['#4F46E5', '#7C3AED', '#00bfa6', '#FBD534', '#FF0066', '#00D4FF', '#FF0000', '#2ECC71'];
       
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 150; i++) {
         const particle = document.createElement('div');
         particle.style.position = 'absolute';
-        const size = Math.random() * 8 + 2;
+        const size = Math.random() * 10 + 2;
         particle.style.width = size + 'px';
         particle.style.height = size + 'px';
         particle.style.background = colors[Math.floor(Math.random() * colors.length)];
         particle.style.borderRadius = '50%';
         particle.style.left = Math.random() * 100 + 'vw';
         particle.style.top = Math.random() * 100 + 'vh';
-        particle.style.opacity = Math.random() * 0.7 + 0.1;
-        particle.style.boxShadow = `0 0 ${Math.random() * 15 + 5}px currentColor`;
+        particle.style.opacity = Math.random() * 0.8 + 0.1;
+        particle.style.boxShadow = `0 0 ${Math.random() * 20 + 5}px currentColor`;
+        particle.style.zIndex = '-1';
         
         // Add animation
-        const duration = Math.random() * 20 + 10;
+        const duration = Math.random() * 25 + 15;
         particle.style.animation = `float ${duration}s ease-in-out infinite`;
         particle.style.animationDelay = Math.random() * 5 + 's';
         
         particlesContainer.appendChild(particle);
       }
       
-      // Typewriter Effect
+      // Enhanced Typewriter Effect
       const typewriterElement = document.querySelector('.typewriter');
       if (typewriterElement) {
         setTimeout(() => {
           typewriterElement.style.animation = 'none';
           setTimeout(() => {
             typewriterElement.style.borderRight = 'none';
+            typewriterElement.classList.add('glow-text');
           }, 500);
         }, 4000);
       }
       
-      // Card hover effects enhancement
+      // Enhanced Card hover effects
       document.querySelectorAll('.policy-card').forEach(card => {
         card.addEventListener('mouseenter', function() {
-          this.style.transform = 'translateY(-8px)';
-          this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.4)';
+          this.style.transform = 'translateY(-12px) scale(1.02)';
+          this.style.boxShadow = '0 30px 60px rgba(0, 0, 0, 0.6)';
         });
         
         card.addEventListener('mouseleave', function() {
-          this.style.transform = 'translateY(0)';
+          this.style.transform = 'translateY(0) scale(1)';
           this.style.boxShadow = '';
         });
       });
@@ -1430,26 +1725,129 @@
       const gradientTexts = document.querySelectorAll('.bg-gradient-to-r');
       gradientTexts.forEach(text => {
         text.style.backgroundSize = '200% 200%';
-        text.style.animation = 'gradient 8s ease infinite';
+        text.style.animation = 'gradient 6s ease infinite';
       });
       
       // Safety alert animation
       const safetyAlerts = document.querySelectorAll('.alert-box');
       safetyAlerts.forEach(alert => {
         setInterval(() => {
-          alert.style.boxShadow = alert.style.boxShadow ? '' : '0 0 20px rgba(239, 68, 68, 0.5)';
-        }, 1000);
+          alert.style.boxShadow = alert.style.boxShadow ? '' : '0 0 30px rgba(239, 68, 68, 0.6)';
+        }, 1500);
       });
       
       // Important sections pulse
       const importantSections = document.querySelectorAll('#policy-statement, #prohibited-content, #reporting');
       importantSections.forEach(section => {
-        section.addEventListener('mouseenter', () => {
-          section.style.animation = 'pulse 2s infinite';
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              section.style.animation = 'pulse 2s infinite';
+            } else {
+              section.style.animation = '';
+            }
+          });
+        }, { threshold: 0.5 });
+        
+        observer.observe(section);
+      });
+      
+      // Tooltip enhancement
+      document.querySelectorAll('.tooltip').forEach(tooltip => {
+        tooltip.addEventListener('mouseenter', function() {
+          const tooltipText = this.getAttribute('data-tooltip');
+          if (tooltipText) {
+            const tooltipEl = document.createElement('div');
+            tooltipEl.className = 'fixed bg-gray-900 text-white px-3 py-2 rounded-lg text-sm z-50 border border-gray-700';
+            tooltipEl.textContent = tooltipText;
+            document.body.appendChild(tooltipEl);
+            
+            const rect = this.getBoundingClientRect();
+            tooltipEl.style.left = (rect.left + rect.width / 2 - tooltipEl.offsetWidth / 2) + 'px';
+            tooltipEl.style.top = (rect.top - tooltipEl.offsetHeight - 10) + 'px';
+            
+            this._tooltipElement = tooltipEl;
+          }
         });
-        section.addEventListener('mouseleave', () => {
-          section.style.animation = '';
+        
+        tooltip.addEventListener('mouseleave', function() {
+          if (this._tooltipElement) {
+            this._tooltipElement.remove();
+            this._tooltipElement = null;
+          }
         });
+      });
+      
+      // Add floating effect to some elements
+      document.querySelectorAll('.floating-element').forEach(el => {
+        el.style.animationDelay = Math.random() * 2 + 's';
+      });
+      
+      // Add click effect to buttons
+      document.querySelectorAll('a, button').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          // Create ripple effect
+          const ripple = document.createElement('span');
+          const rect = this.getBoundingClientRect();
+          const size = Math.max(rect.width, rect.height);
+          const x = e.clientX - rect.left - size / 2;
+          const y = e.clientY - rect.top - size / 2;
+          
+          ripple.style.cssText = `
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.7);
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            width: ${size}px;
+            height: ${size}px;
+            top: ${y}px;
+            left: ${x}px;
+            pointer-events: none;
+          `;
+          
+          this.appendChild(ripple);
+          
+          setTimeout(() => {
+            ripple.remove();
+          }, 600);
+        });
+      });
+      
+      // Add CSS for ripple effect
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes ripple {
+          to {
+            transform: scale(4);
+            opacity: 0;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+      
+      // Section counter animation on scroll
+      const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px 0px -100px 0px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const counter = entry.target.querySelector('.section-counter');
+            if (counter) {
+              counter.style.transform = 'rotate(360deg) scale(1.1)';
+              setTimeout(() => {
+                counter.style.transform = '';
+              }, 500);
+            }
+          }
+        });
+      }, observerOptions);
+      
+      document.querySelectorAll('section[id]').forEach(section => {
+        observer.observe(section);
       });
     });
   </script>
