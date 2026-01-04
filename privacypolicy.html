@@ -8,7 +8,7 @@
     <title>Privacy Policy | 12 Testers - Testers Community</title>
     
     <!-- Favicon -->
-    <link rel="icon" href="https://raw.githubusercontent.com/nadeemgamingstudio/Icons/refs/heads/main/12TestersTestersCommunity.png" type="image/x-icon"/>
+    <link rel="icon" href="https://raw.githubusercontent.com/nadeemgamingstudio/testerscommunity/refs/heads/main/icon.png" type="image/x-icon"/>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -326,22 +326,219 @@
         }
         
         /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .side-animated-bar {
-                display: none;
-            }
-            .scroll-top-btn {
-                width: 50px;
-                height: 50px;
-                bottom: 20px;
-                right: 20px;
-            }
-            .section-counter {
-                width: 35px;
-                height: 35px;
-                margin-right: 10px;
-            }
-        }
+@media (max-width: 768px) {
+    
+    
+    }
+    
+    /* Navigation links - hide on mobile, show hamburger */
+    .space-x-4 {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 8px;
+    }
+    
+    .mobile-menu {
+        display: none;
+        width: 100%;
+        background: #1a1a1a;
+        border-radius: 10px;
+        margin-top: 15px;
+        padding: 15px;
+    }
+    
+    .mobile-menu.active {
+        display: block;
+    }
+    
+    .mobile-menu a {
+        display: block;
+        padding: 12px 15px;
+        margin: 5px 0;
+        background: rgba(79, 70, 229, 0.1);
+        border-radius: 8px;
+        border-left: 4px solid #4F46E5;
+    }
+    
+    /* Hero Section */
+    .hero-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .text-4xl, .text-6xl {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .text-2xl, .text-3xl {
+        font-size: 1.5rem !important;
+    }
+    
+    /* Token System */
+    .grid-cols-2, .lg\\:grid-cols-2 {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* How it Works Steps */
+    #how-it-works .relative .absolute {
+        display: none;
+    }
+    
+    #how-it-works ul {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    #how-it-works li {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    #how-it-works .ml-8, #how-it-works .mr-8 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    /* Modules Section */
+    #modules .space-y-8 {
+        gap: 20px;
+    }
+    
+    /* Feedback Section */
+    .md\\:grid-cols-3 {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Testimonial Cards */
+    .testimonial-card {
+        margin-bottom: 20px;
+    }
+    
+    /* Call to Action Buttons */
+    .flex-col.sm\\:flex-row {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+    
+    .px-10.py-5 {
+        padding: 12px 20px !important;
+        font-size: 1rem !important;
+    }
+    
+    .px-10.py-4 {
+        padding: 10px 16px !important;
+    }
+    
+    /* Footer */
+    .md\\:grid-cols-4 {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+    
+    .scroll-top-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 20px;
+    }
+    
+    /* Global padding adjustments */
+    .p-8, .p-10, .p-6 {
+        padding: 1.5rem !important;
+    }
+    
+    .py-16, .py-20 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    .pt-12 {
+        padding-top: 1.5rem !important;
+    }
+    
+    .pb-20 {
+        padding-bottom: 2rem !important;
+    }
+    
+    /* Mobile specific margins */
+    .mb-16 {
+        margin-bottom: 2rem !important;
+    }
+    
+    .mt-20 {
+        margin-top: 2rem !important;
+    }
+    
+    /* Text adjustments */
+    .text-xl {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* Card hover effects */
+    .card-hover:hover {
+        transform: translateY(-5px) !important;
+    }
+}
+
+/* Very small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    .text-4xl {
+        font-size: 1.75rem !important;
+    }
+    
+    .text-3xl {
+        font-size: 1.5rem !important;
+    }
+    
+    .text-2xl {
+        font-size: 1.25rem !important;
+    }
+    
+    .px-4 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    /* Button text size */
+    .text-lg {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    background: linear-gradient(45deg, #4F46E5, #7C3AED);
+    border: none;
+    color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.mobile-menu-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(79, 70, 229, 0.8);
+}
     </style>
 </head>
 <body class="bg-primary-bg text-text-light min-h-screen antialiased">
@@ -365,8 +562,8 @@
             <!-- Logo/Title -->
             <div class="flex items-center space-x-3" data-aos="fade-right" data-aos-duration="1000">
                 <div class="relative">
-                    <a href="https://nadeemgamingstudio.github.io/12TestersTestersCommunity">
-                        <img src="https://raw.githubusercontent.com/nadeemgamingstudio/Icons/refs/heads/main/12TestersTestersCommunity.png" 
+                    <a href="https://nadeemgamingstudio.github.io/testerscommunity">
+                        <img src="https://raw.githubusercontent.com/nadeemgamingstudio/testerscommunity/refs/heads/main/icon.png" 
                              alt="12 Testers Logo" 
                              class="h-10 w-10 rounded-xl border-2 border-accent-yellow p-0.5 animate-spin-slow"
                              onerror="this.src='https://placehold.co/40x40/1a1a1a/00bfa6?text=12T'">
@@ -385,7 +582,7 @@
             
             <!-- Navigation Links -->
             <div class="space-x-4 flex items-center" data-aos="fade-left" data-aos-duration="1000">
-                <a href="https://nadeemgamingstudio.github.io/12TestersTestersCommunity" 
+                <a href="https://nadeemgamingstudio.github.io/testerscommunity/" 
                    class="relative group px-5 py-2.5 rounded-xl font-bold transition-all duration-300 overflow-hidden">
                     <span class="relative z-10 text-white flex items-center">
                         <i class="fas fa-home mr-2"></i> HOME
@@ -414,8 +611,8 @@
                 </a>
                 
                 <!-- Child Safety Policy Link -->
-                <a href="https://nadeemgamingstudio.github.io/12TestersTestersCommunity/ChildSafetyandCSAMPolicy" 
-                   target="_blank"
+                <a href="https://nadeemgamingstudio.github.io/testerscommunity/childsafetypolicy" 
+                  
                    class="relative group px-5 py-2.5 rounded-xl font-bold transition-all duration-300 overflow-hidden">
                     <span class="relative z-10 text-white flex items-center">
                         <i class="fas fa-child mr-2"></i> CHILD SAFETY
@@ -424,6 +621,26 @@
                     <div class="absolute inset-0 border-2 border-accent-pink rounded-xl"></div>
                 </a>
             </div>
+            <!-- Mobile Menu Button (Add this after logo div) -->
+<button class="mobile-menu-btn" id="mobileMenuBtn">
+    <i class="fas fa-bars"></i>
+</button>
+
+<!-- Mobile Menu (Add this after navigation links div) -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="https://nadeemgamingstudio.github.io/testerscommunity/" class="block mb-2">
+        <i class="fas fa-home mr-2"></i> HOME
+    </a>
+    <a href="https://nadeemgamingstudio.github.io/Contact" class="block mb-2">
+        <i class="fas fa-phone-alt mr-2"></i> CONTACT
+    </a>
+    <a href="#" target="_blank" class="block">
+        <i class="fas fa-shield-alt mr-2"></i> PRIVACY POLICY
+    </a>
+    <a href="https://nadeemgamingstudio.github.io/testerscommunity/childsafetypolicy" class="block mb-2">
+        <i class="fas fa-child mr-2"></i> CHILD SAFETY
+    </a>
+</div>
         </nav>
     </header>
 
@@ -1368,7 +1585,7 @@
                         </span>
                     </a>
                     
-                    <a href="https://nadeemgamingstudio.github.io/12TestersTestersCommunity" 
+                    <a href="https://nadeemgamingstudio.github.io/testerscommunity" 
                        class="px-8 py-4 bg-gray-800 text-white font-bold rounded-xl border-2 border-gray-700 hover:border-teal-accent hover:shadow-neon-teal transition-all duration-300">
                         <span class="flex items-center justify-center">
                             <i class="fas fa-home text-xl mr-3"></i>
@@ -1411,18 +1628,18 @@
                 <div>
                     <h4 class="text-lg font-bold text-white mb-6 border-l-4 border-accent-yellow pl-3">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="https://nadeemgamingstudio.github.io/12TestersTestersCommunity" class="text-gray-400 hover:text-teal-accent transition duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Home</a></li>
+                        <li><a href="https://nadeemgamingstudio.github.io/" class="text-gray-400 hover:text-teal-accent transition duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Home</a></li>
                         <li><a href="https://nadeemgamingstudio.github.io/Contact" class="text-gray-400 hover:text-accent-yellow transition duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Contact</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-accent-green transition duration-300 flex items-center text-teal-accent font-bold"><i class="fas fa-chevron-right text-xs mr-2 text-teal-accent"></i> Privacy Policy</a></li>
-                        <li><a href="https://nadeemgamingstudio.github.io/12TestersTestersCommunity/ChildSafetyandCSAMPolicy" target="_blank" class="text-gray-400 hover:text-accent-pink transition duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Child Safety Policy</a></li>
+                        <li><a href="https://nadeemgamingstudio.github.io/privacypolicy" class="text-gray-400 hover:text-accent-green transition duration-300 flex items-center text-teal-accent font-bold"><i class="fas fa-chevron-right text-xs mr-2 text-teal-accent"></i> Privacy Policy</a></li>
+                        <li><a href="https://nadeemgamingstudio.github.io/testerscommunity/childsafetypolicy" target="_blank" class="text-gray-400 hover:text-accent-pink transition duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Child Safety Policy</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h4 class="text-lg font-bold text-white mb-6 border-l-4 border-accent-pink pl-3">Legal Documents</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-teal-accent transition duration-300 flex items-center"><i class="fas fa-file-contract text-xs mr-2"></i> Privacy Policy</a></li>
-                        <li><a href="https://nadeemgamingstudio.github.io/12TestersTestersCommunity/ChildSafetyandCSAMPolicy" target="_blank" class="text-gray-400 hover:text-accent-yellow transition duration-300 flex items-center"><i class="fas fa-child text-xs mr-2"></i> Child Safety Policy</a></li>
+                        <li><a href="https://nadeemgamingstudio.github.io/privacypolicy" class="text-gray-400 hover:text-teal-accent transition duration-300 flex items-center"><i class="fas fa-file-contract text-xs mr-2"></i> Privacy Policy</a></li>
+                        <li><a href="https://nadeemgamingstudio.github.io/testerscommunity/childsafetypolicy" target="_blank" class="text-gray-400 hover:text-accent-yellow transition duration-300 flex items-center"><i class="fas fa-child text-xs mr-2"></i> Child Safety Policy</a></li>
                         <li><a href="https://play.google.com/store/apps/details?id=com.nadeemgs.testerscommunity" target="_blank" class="text-gray-400 hover:text-accent-blue transition duration-300 flex items-center"><i class="fab fa-google-play text-xs mr-2"></i> Google Play Listing</a></li>
                     </ul>
                 </div>
@@ -1509,6 +1726,55 @@
                     behavior: 'smooth'
                 });
             });
+            
+            // Mobile Menu Toggle
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        const icon = this.querySelector('i');
+        if (mobileMenu.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+            this.style.background = 'linear-gradient(45deg, #EC4899, #FBD534)';
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+            this.style.background = 'linear-gradient(45deg, #4F46E5, #7C3AED)';
+        }
+    });
+    
+    // Close menu when clicking on a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+            mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+            mobileMenuBtn.style.background = 'linear-gradient(45deg, #4F46E5, #7C3AED)';
+        });
+    });
+}
+
+// Show mobile menu button on small screens
+function checkScreenSize() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const desktopNav = document.querySelector('.space-x-4');
+    
+    if (window.innerWidth <= 768) {
+        if (mobileMenuBtn) mobileMenuBtn.style.display = 'block';
+        if (desktopNav) desktopNav.style.display = 'none';
+    } else {
+        if (mobileMenuBtn) mobileMenuBtn.style.display = 'none';
+        if (desktopNav) desktopNav.style.display = 'flex';
+        if (mobileMenu) mobileMenu.classList.remove('active');
+    }
+}
+
+// Check on load and resize
+window.addEventListener('load', checkScreenSize);
+window.addEventListener('resize', checkScreenSize);
             
             // Smooth scrolling for table of contents links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
