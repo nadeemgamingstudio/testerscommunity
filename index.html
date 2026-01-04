@@ -318,18 +318,394 @@
             background-size: 400% 400%;
         }
         
+        
+    
+    .side-animated-bar {
+        display: none;
+    }
+    
+    /* Navigation links - hide on mobile, show hamburger */
+    .space-x-4 {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 8px;
+    }
+    
+    .mobile-menu {
+        display: none;
+        width: 100%;
+        background: #1a1a1a;
+        border-radius: 10px;
+        margin-top: 15px;
+        padding: 15px;
+    }
+    
+    .mobile-menu.active {
+        display: block;
+    }
+    
+    .mobile-menu a {
+        display: block;
+        padding: 12px 15px;
+        margin: 5px 0;
+        background: rgba(79, 70, 229, 0.1);
+        border-radius: 8px;
+        border-left: 4px solid #4F46E5;
+    }
+    
+    /* Hero Section */
+    .hero-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .text-4xl, .text-6xl {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .text-2xl, .text-3xl {
+        font-size: 1.5rem !important;
+    }
+    
+    /* Token System */
+    .grid-cols-2, .lg\\:grid-cols-2 {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* How it Works Steps */
+    #how-it-works .relative .absolute {
+        display: none;
+    }
+    
+    #how-it-works ul {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    #how-it-works li {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    #how-it-works .ml-8, #how-it-works .mr-8 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    /* Modules Section */
+    #modules .space-y-8 {
+        gap: 20px;
+    }
+    
+    /* Feedback Section */
+    .md\\:grid-cols-3 {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Testimonial Cards */
+    .testimonial-card {
+        margin-bottom: 20px;
+    }
+    
+    /* Call to Action Buttons */
+    .flex-col.sm\\:flex-row {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+    
+    .px-10.py-5 {
+        padding: 12px 20px !important;
+        font-size: 1rem !important;
+    }
+    
+    .px-10.py-4 {
+        padding: 10px 16px !important;
+    }
+    
+    /* Footer */
+    .md\\:grid-cols-4 {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+    
+    .scroll-top-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 20px;
+    }
+    
+    /* Global padding adjustments */
+    .p-8, .p-10, .p-6 {
+        padding: 1.5rem !important;
+    }
+    
+    .py-16, .py-20 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    .pt-12 {
+        padding-top: 1.5rem !important;
+    }
+    
+    .pb-20 {
+        padding-bottom: 2rem !important;
+    }
+    
+    /* Mobile specific margins */
+    .mb-16 {
+        margin-bottom: 2rem !important;
+    }
+    
+    .mt-20 {
+        margin-top: 2rem !important;
+    }
+    
+    /* Text adjustments */
+    .text-xl {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* Card hover effects */
+    .card-hover:hover {
+        transform: translateY(-5px) !important;
+    }
+}
+
+/* Very small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    .text-4xl {
+        font-size: 1.75rem !important;
+    }
+    
+    .text-3xl {
+        font-size: 1.5rem !important;
+    }
+    
+    .text-2xl {
+        font-size: 1.25rem !important;
+    }
+    
+    .px-4 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    /* Button text size */
+    .text-lg {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: linear-gradient(45deg, #4F46E5, #7C3AED);
+            border: none;
+            color: white;
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 100;
+        }
+        
+        .mobile-menu-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(79, 70, 229, 0.8);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 0 0 15px 15px;
+            border-top: 2px solid #4F46E5;
+            z-index: 99;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            padding: 15px;
+            margin: 8px 0;
+            background: rgba(79, 70, 229, 0.1);
+            border-radius: 10px;
+            border-left: 4px solid #4F46E5;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .mobile-menu a:hover {
+            background: rgba(79, 70, 229, 0.2);
+            transform: translateX(5px);
+        }
+        
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .side-animated-bar {
                 display: none;
             }
+            
+            .mobile-menu-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            /* Navigation links hide on mobile */
+            .space-x-4 {
+                display: none;
+            }
+            
+            /* Hero Section adjustments */
+            .text-4xl, .text-6xl {
+                font-size: 2rem !important;
+                line-height: 1.2 !important;
+            }
+            
+            .text-2xl, .text-3xl {
+                font-size: 1.5rem !important;
+            }
+            
+            /* Grid adjustments for mobile */
+            .grid-cols-2, .lg\\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .md\\:grid-cols-3, .md\\:grid-cols-4 {
+                grid-template-columns: 1fr !important;
+            }
+            
+            /* Steps section adjustment */
+            #how-it-works .relative .absolute {
+                display: none;
+            }
+            
+            #how-it-works li {
+                flex-direction: column;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            
+            #how-it-works .ml-8, #how-it-works .mr-8 {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+            
+            /* Button sizing */
+            .px-10.py-5, .px-10.py-4 {
+                padding: 12px 20px !important;
+                font-size: 1rem !important;
+            }
+            
+            .flex-col.sm\\:flex-row {
+                flex-direction: column !important;
+                gap: 15px !important;
+            }
+            
+            /* Padding adjustments */
+            .p-8, .p-10, .p-6 {
+                padding: 1.5rem !important;
+            }
+            
+            .py-16, .py-20 {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .pt-12 {
+                padding-top: 1.5rem !important;
+            }
+            
+            .pb-20 {
+                padding-bottom: 2rem !important;
+            }
+            
+            /* Text adjustments */
+            .text-xl {
+                font-size: 1rem !important;
+                line-height: 1.5 !important;
+            }
+            
+            /* Card hover effects for mobile */
+            .card-hover:hover {
+                transform: translateY(-5px) !important;
+            }
+            
             .scroll-top-btn {
                 width: 50px;
                 height: 50px;
-                bottom: 20px;
-                right: 20px;
+                bottom: 25px;
+                right: 25px;
+                font-size: 20px;
+            }
+            
+            /* Footer adjustments */
+            .md\\:grid-cols-4 {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
             }
         }
+
+        /* Very small devices (phones, 480px and down) */
+        @media (max-width: 480px) {
+            .text-4xl {
+                font-size: 1.75rem !important;
+            }
+            
+            .text-3xl {
+                font-size: 1.5rem !important;
+            }
+            
+            .text-2xl {
+                font-size: 1.25rem !important;
+            }
+            
+            .px-4 {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            .mobile-menu-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+        }
+.mobile-menu-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(79, 70, 229, 0.8);
+}
     </style>
 </head>
 <body class="bg-primary-bg text-text-light min-h-screen antialiased">
@@ -371,7 +747,12 @@
                 </div>
             </div>
             
-            <!-- Navigation Links -->
+            <!-- Mobile Menu Button (Add this after logo div) -->
+<button class="mobile-menu-btn" id="mobileMenuBtn">
+    <i class="fas fa-bars"></i>
+</button>
+            
+            <!-- Desktop Navigation Links -->
             <div class="space-x-4 flex items-center" data-aos="fade-left" data-aos-duration="1000">
                 <a href="https://nadeemgamingstudio.github.io/" 
                    class="relative group px-5 py-2.5 rounded-xl font-bold transition-all duration-300 overflow-hidden">
@@ -410,9 +791,23 @@
                     <div class="absolute inset-0 border-2 border-accent-pink rounded-xl"></div>
                 </a>
             </div>
+        <!-- Mobile Menu (Hidden by default) -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="https://nadeemgamingstudio.github.io/" class="flex items-center">
+                    <i class="fas fa-home mr-3"></i> HOME
+                </a>
+                <a href="#token-system" class="flex items-center">
+                    <i class="fas fa-coins mr-3"></i> TOKEN SYSTEM
+                </a>
+                <a href="#how-it-works" class="flex items-center">
+                    <i class="fas fa-cogs mr-3"></i> TEST FLOW
+                </a>
+                <a href="https://nadeemgamingstudio.github.io/testerscommunity/privacypolicy" target="_blank" class="flex items-center">
+                    <i class="fas fa-shield-alt mr-3"></i> PRIVACY
+                </a>
+            </div>
         </nav>
     </header>
-
 
     
     <!-- Main Content Container -->
@@ -1103,6 +1498,63 @@
                 offset: 100
             });
             
+            
+            
+            
+            
+            // Mobile Menu Toggle
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        const icon = this.querySelector('i');
+        if (mobileMenu.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+            this.style.background = 'linear-gradient(45deg, #EC4899, #FBD534)';
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+            this.style.background = 'linear-gradient(45deg, #4F46E5, #7C3AED)';
+        }
+    });
+    
+    // Close menu when clicking on a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+            mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+            mobileMenuBtn.style.background = 'linear-gradient(45deg, #4F46E5, #7C3AED)';
+        });
+    });
+}
+
+// Show mobile menu button on small screens
+function checkScreenSize() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const desktopNav = document.querySelector('.space-x-4');
+    
+    if (window.innerWidth <= 768) {
+        if (mobileMenuBtn) mobileMenuBtn.style.display = 'block';
+        if (desktopNav) desktopNav.style.display = 'none';
+    } else {
+        if (mobileMenuBtn) mobileMenuBtn.style.display = 'none';
+        if (desktopNav) desktopNav.style.display = 'flex';
+        if (mobileMenu) mobileMenu.classList.remove('active');
+    }
+}
+
+// Check on load and resize
+window.addEventListener('load', checkScreenSize);
+window.addEventListener('resize', checkScreenSize);
+            
+            
+            
+            
+            
             // Scroll to Top Button
             const scrollTopBtn = document.getElementById('scrollTopBtn');
             
@@ -1245,7 +1697,6 @@
     </script>
 </body>
 </html>
-
 
 
 
